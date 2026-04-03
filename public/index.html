@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIMP — Network In My Pocket</title>
+<meta name="description" content="The networking companion for introverts. Get the right words for any situation — online, in person, and everywhere in between.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f5f0;
+    --white: #ffffff;
+    --ink: #1a1814;
+    --muted: #6b6760;
+    --border: #e0dbd2;
+    --teal: #1D9E75;
+    --teal-light: #E1F5EE;
+    --teal-dark: #085041;
+    --purple: #7F77DD;
+    --purple-light: #EEEDFE;
+    --purple-dark: #3C3489;
+    --amber: #c9a84c;
+    --amber-light: #FAEEDA;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+  }
+
+  .nav-logo span { color: var(--teal); }
+
+  .nav-cta {
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* PAGES */
+  #landing { display: block; }
+  #app { display: none; }
+
+  /* HERO */
+  .hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 24px 64px;
+    text-align: center;
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    background: var(--teal-light);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--teal);
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 36px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 12px;
+    padding: 16px 40px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 12px;
+  }
+
+  .hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* STATS */
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 40px 24px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+  }
+  .stat-label { font-size: 13px; color: var(--muted); }
+
+  /* MODES SECTION */
+  .modes-section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    animation: fadeUp 0.7s 0.15s ease both;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .modes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .mode-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .mode-card:hover {
+    border-color: var(--teal);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+
+  .mode-card.full { grid-column: 1 / -1; }
+
+  .mode-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .mode-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+
+  .mode-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* QUOTE */
+  .quote-section {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 64px 24px;
+    text-align: center;
+  }
+
+  .quote-text {
+    font-family: 'Lora', serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-style: italic;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  .quote-author {
+    font-size: 13px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  footer strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ===== APP ===== */
+  .app-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+  }
+
+  .app-logo {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .app-logo span { color: var(--teal); }
+
+  .back-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .back-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+  .app-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* MODE PILLS */
+  .pills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .pill {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--white);
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .pill.active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  /* CARD */
+  .form-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 16px;
+  }
+
+  .tip-box {
+    background: var(--teal-light);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--teal-dark);
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  .field-group { margin-bottom: 16px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+
+  label {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px;
+    background: var(--bg);
+    color: var(--ink);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    resize: none;
+    appearance: none;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(29,158,117,0.1);
+  }
+
+  /* CHIPS */
+  .chip-group { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .chip {
+    padding: 7px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    background: transparent;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .chip.tone.selected {
+    border-color: var(--teal);
+    background: var(--teal-light);
+    color: var(--teal-dark);
+  }
+
+  .chip.sub.selected {
+    border-color: var(--purple);
+    background: var(--purple-light);
+    color: var(--purple-dark);
+  }
+
+  /* GENERATE BTN */
+  .gen-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+
+  .gen-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .gen-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  /* ERROR */
+  .error-box {
+    display: none;
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: #fff5f5;
+    border: 1px solid #fcc;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #c0392b;
+  }
+
+  /* OUTPUT */
+  .output-card {
+    display: none;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 16px;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .output-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .output-actions { display: flex; gap: 8px; }
+
+  .action-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .action-btn:hover { border-color: var(--ink); color: var(--ink); }
+  .action-btn.copied { border-color: var(--teal); color: var(--teal); }
+
+  .output-text {
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 15px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .char-count {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .char-count.over { color: #c0392b; }
+
+  /* HISTORY */
+  .history-card {
+    display: none;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .hist-item {
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
+  .hist-meta {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    nav { padding: 0 20px; }
+    .stats { gap: 24px; flex-wrap: wrap; }
+    .modes-grid { grid-template-columns: 1fr; }
+    .mode-card.full { grid-column: 1; }
+    .field-row { grid-template-columns: 1fr; }
+    .form-card { padding: 20px; }
+    .app-body { padding: 20px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== LANDING ===== -->
+<div id="landing">
+  <nav>
+    <div class="nav-logo">NIMP<span>.</span></div>
+    <button class="nav-cta" onclick="showApp()">Try it free</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-eyebrow">For introverts, by design</div>
+    <h1>Networking that feels<br><em>like you.</em></h1>
+    <p>You don't have to be an extrovert to build powerful connections. NIMP gives you the right words — online, in person, and everywhere in between.</p>
+    <button class="hero-btn" onclick="showApp()">Get the words you need →</button>
+    <div class="hero-sub">Free to try. No signup. No pressure.</div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Networking situations</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Online + IRL</span>
+      <span class="stat-label">Works everywhere</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">&lt;30s</span>
+      <span class="stat-label">To a ready message</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Built for introverts</span>
+    </div>
+  </div>
+
+  <section class="modes-section">
+    <div class="section-label">What NIMP does</div>
+    <h2 class="section-title">Every networking situation, covered.</h2>
+    <p class="section-sub">Pick your situation and get words that actually sound like you.</p>
+
+    <div class="modes-grid">
+      <div class="mode-card" onclick="showApp(0)">
+        <div class="mode-icon" style="background: var(--purple-light);">💬</div>
+        <div>
+          <h3>Online DMs</h3>
+          <p>LinkedIn, Instagram, Twitter, Discord — personalized messages that don't sound like a bot.</p>
+        </div>
+      </div>
+      <div class="mode-card" onclick="showApp(1)">
+        <div class="mode-icon" style="background: var(--teal-light);">🤝</div>
+        <div>
+          <h3>In-person events</h3>
+          <p>Conversation starters, elevator pitch, and how to exit gracefully — so you're never caught off guard.</p>
+        </div>
+      </div>
+      <div class="mode-card" onclick="showApp(2)">
+        <div class="mode-icon" style="background: var(--amber-light);">📩</div>
+        <div>
+          <h3>Following up</h3>
+          <p>Warm, specific follow-ups after meeting someone new — without the awkward "just checking in."</p>
+        </div>
+      </div>
+      <div class="mode-card" onclick="showApp(3)">
+        <div class="mode-icon" style="background: #FBEAF0;">🔄</div>
+        <div>
+          <h3>Reconnecting</h3>
+          <p>Reach back out after months or years — naturally, without it feeling weird.</p>
+        </div>
+      </div>
+      <div class="mode-card full" onclick="showApp(4)">
+        <div class="mode-icon" style="background: #EAF3DE;">✨</div>
+        <div>
+          <h3>Your personal intro</h3>
+          <p>Craft how you introduce yourself in any situation — events, LinkedIn, emails, interviews. Finally have an answer to "so what do you do?"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <p class="quote-text">"Networking isn't about being the loudest in the room. It's about being the most intentional. NIMP gives introverts the superpower they already have — just the words to go with it."</p>
+    <div class="quote-author">— Your Name · Networking Expert · getnimp.co</div>
+  </section>
+
+  <footer>
+    <p style="margin-bottom:6px;"><strong>Network In My Pocket</strong> · getnimp.co</p>
+    <p>Built for the quiet ones who have the most to say.</p>
+  </footer>
+</div>
+
+<!-- ===== APP ===== -->
+<div id="app">
+  <div class="app-nav">
+    <div class="app-logo">NIMP<span>.</span></div>
+    <button class="back-btn" onclick="showLanding()">← Back to home</button>
+  </div>
+
+  <div class="app-body">
+
+    <div class="pills-wrap">
+      <button class="pill active" onclick="switchMode(0,this)">Online DMs</button>
+      <button class="pill" onclick="switchMode(1,this)">In-person</button>
+      <button class="pill" onclick="switchMode(2,this)">Follow-up</button>
+      <button class="pill" onclick="switchMode(3,this)">Reconnect</button>
+      <button class="pill" onclick="switchMode(4,this)">My intro</button>
+    </div>
+
+    <div class="form-card">
+      <div class="tip-box" id="mode-tip"></div>
+
+      <!-- Online DMs -->
+      <div id="panel-online">
+        <div class="field-row">
+          <div><label>Their name *</label><input id="o-name" type="text" placeholder="e.g. Jordan Lee" /></div>
+          <div><label>Platform</label>
+            <select id="o-platform">
+              <option>LinkedIn</option><option>Instagram</option><option>Twitter / X</option><option>Discord</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-group"><label>Their role or what they do</label><input id="o-role" type="text" placeholder="e.g. UX designer at a startup" /></div>
+        <div class="field-group"><label>Something specific about them</label><textarea id="o-about" rows="2" placeholder="e.g. They posted about burnout in tech, run a newsletter…"></textarea></div>
+        <div class="field-group"><label>Your goal</label><textarea id="o-goal" rows="2" placeholder="e.g. I want to learn about their freelance journey…"></textarea></div>
+      </div>
+
+      <!-- In-person -->
+      <div id="panel-inperson" style="display:none;">
+        <div class="field-group"><label>Type of event *</label><input id="ip-event" type="text" placeholder="e.g. Tech meetup, industry conference, alumni mixer" /></div>
+        <div class="field-group"><label>Your role / background</label><input id="ip-role" type="text" placeholder="e.g. Networking coach, marketer, student" /></div>
+        <div class="field-group"><label>Who are you hoping to meet?</label><input id="ip-target" type="text" placeholder="e.g. Founders, hiring managers, collaborators" /></div>
+        <div class="field-group">
+          <label>I need help with</label>
+          <div class="chip-group">
+            <button class="chip sub selected" onclick="this.classList.toggle('selected')">Conversation starters</button>
+            <button class="chip sub" onclick="this.classList.toggle('selected')">Elevator pitch</button>
+            <button class="chip sub" onclick="this.classList.toggle('selected')">How to exit gracefully</button>
+            <button class="chip sub" onclick="this.classList.toggle('selected')">What to do if I blank</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Follow-up -->
+      <div id="panel-followup" style="display:none;">
+        <div class="field-row">
+          <div><label>Their name *</label><input id="fu-name" type="text" placeholder="e.g. Marcus Williams" /></div>
+          <div><label>Where you met</label><input id="fu-where" type="text" placeholder="e.g. Conference, LinkedIn" /></div>
+        </div>
+        <div class="field-group"><label>What you talked about</label><textarea id="fu-context" rows="2" placeholder="e.g. We talked about breaking into sales engineering…"></textarea></div>
+        <div class="field-group"><label>Desired next step</label><input id="fu-next" type="text" placeholder="e.g. Stay in touch, schedule a call" /></div>
+      </div>
+
+      <!-- Reconnect -->
+      <div id="panel-reconnect" style="display:none;">
+        <div class="field-row">
+          <div><label>Their name *</label><input id="rc-name" type="text" placeholder="e.g. Priya Sharma" /></div>
+          <div><label>How long since you spoke</label><input id="rc-time" type="text" placeholder="e.g. 6 months, 2 years" /></div>
+        </div>
+        <div class="field-group"><label>How you originally knew them</label><input id="rc-how" type="text" placeholder="e.g. Old coworker, college classmate" /></div>
+        <div class="field-group"><label>Reason to reconnect</label><textarea id="rc-reason" rows="2" placeholder="e.g. I saw they got promoted, I'm exploring a career change…"></textarea></div>
+      </div>
+
+      <!-- My Intro -->
+      <div id="panel-intro" style="display:none;">
+        <div class="field-group"><label>Your name *</label><input id="in-name" type="text" placeholder="e.g. Alex Rivera" /></div>
+        <div class="field-group"><label>What you do</label><input id="in-role" type="text" placeholder="e.g. Networking coach & founder of NIMP" /></div>
+        <div class="field-group"><label>Who you help or what you're building</label><textarea id="in-work" rows="2" placeholder="e.g. I help introverts build real connections without the awkwardness…"></textarea></div>
+        <div class="field-group"><label>Where will you use this intro?</label>
+          <select id="in-context">
+            <option>Networking event (in person)</option>
+            <option>LinkedIn bio</option>
+            <option>Cold email or DM</option>
+            <option>Job interview</option>
+            <option>Online community intro</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tone -->
+      <div style="margin-top: 20px; margin-bottom: 20px;">
+        <label>Tone</label>
+        <div class="chip-group">
+          <button class="chip tone selected" onclick="selectTone(this)">Warm &amp; calm</button>
+          <button class="chip tone" onclick="selectTone(this)">Confident &amp; clear</button>
+          <button class="chip tone" onclick="selectTone(this)">Curious &amp; genuine</button>
+          <button class="chip tone" onclick="selectTone(this)">Low-key &amp; easy</button>
+        </div>
+      </div>
+
+      <button class="gen-btn" id="gen-btn" onclick="generate()">Get my words ↗</button>
+      <div class="error-box" id="err-box"></div>
+    </div>
+
+    <!-- Output -->
+    <div class="output-card" id="output-card">
+      <div class="output-header">
+        <span class="output-label">Your message</span>
+        <div class="output-actions">
+          <button class="action-btn" id="regen-btn" onclick="regenerate()">↺ Regenerate</button>
+          <button class="action-btn" id="save-btn" onclick="saveMsg()">★ Save</button>
+          <button class="action-btn" id="copy-btn" onclick="copyMsg()">Copy</button>
+        </div>
+      </div>
+      <div class="output-text" id="output-text"></div>
+      <div class="char-count" id="char-count"></div>
+    </div>
+
+    <!-- History -->
+    <div class="history-card" id="history-card">
+      <div class="history-header">
+        <span style="font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">Saved messages</span>
+        <button class="action-btn" onclick="clearHistory()">Clear all</button>
+      </div>
+      <div id="history-list"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+const TIPS = [
+  "Lead with curiosity about them, not a pitch about you. The best DMs feel like the start of a real conversation.",
+  "Introverts thrive at events when they have a plan. Prepare 2-3 questions in advance and aim for depth over volume.",
+  "The best follow-up references something specific you discussed. It shows you were actually listening.",
+  "Reconnecting is never as awkward as it feels. A genuine reason to reach out is all you need.",
+  "Your intro should answer three things: who you are, what you do, and why it matters to them."
+];
+
+const PANELS = ['panel-online','panel-inperson','panel-followup','panel-reconnect','panel-intro'];
+const MODE_NAMES = ['Online DM','In-person','Follow-up','Reconnect','Intro'];
+
+let currentMode = 0;
+let selectedTone = 'Warm & calm';
+let savedMessages = [];
+let lastPrompt = '';
+
+function showApp(mode) {
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  window.scrollTo(0,0);
+  if (mode !== undefined) {
+    const pills = document.querySelectorAll('.pill');
+    switchMode(mode, pills[mode]);
+  }
+  updateTip();
+}
+
+function showLanding() {
+  document.getElementById('landing').style.display = 'block';
+  document.getElementById('app').style.display = 'none';
+  window.scrollTo(0,0);
+}
+
+function updateTip() {
+  document.getElementById('mode-tip').textContent = '💡 ' + TIPS[currentMode];
+}
+
+function switchMode(i, el) {
+  PANELS.forEach((p,j) => document.getElementById(p).style.display = j===i ? 'block' : 'none');
+  document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  currentMode = i;
+  updateTip();
+  document.getElementById('err-box').style.display = 'none';
+  document.getElementById('output-card').style.display = 'none';
+}
+
+function selectTone(el) {
+  document.querySelectorAll('.chip.tone').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedTone = el.textContent.trim();
+}
+
+function getSubChips() {
+  return Array.from(document.querySelectorAll('.chip.sub.selected')).map(b => b.textContent).join(', ');
+}
+
+function buildPrompt() {
+  if (currentMode === 0) {
+    const name = document.getElementById('o-name').value.trim();
+    if (!name) return null;
+    const platform = document.getElementById('o-platform').value;
+    const role = document.getElementById('o-role').value.trim();
+    const about = document.getElementById('o-about').value.trim();
+    const goal = document.getElementById('o-goal').value.trim();
+    return `[NIMP - ONLINE DM]\nPlatform: ${platform}\nRecipient: ${name}${role ? ', '+role:''}\nAbout them: ${about||'not provided'}\nGoal: ${goal||'genuine connection'}\nTone: ${selectedTone}\n\nWrite a personalized outreach DM for ${platform}. Lead with genuine interest in them. No cringe openers. Soft low-pressure ending. If LinkedIn keep under 300 chars. Output ONLY the message.`;
+  }
+  if (currentMode === 1) {
+    const event = document.getElementById('ip-event').value.trim();
+    if (!event) return null;
+    const role = document.getElementById('ip-role').value.trim();
+    const target = document.getElementById('ip-target').value.trim();
+    const needs = getSubChips() || 'conversation starters';
+    return `[NIMP - IN-PERSON]\nEvent: ${event}\nMy background: ${role||'professional'}\nHoping to meet: ${target||'interesting people'}\nHelp needed: ${needs}\nTone: ${selectedTone}\n\nI'm an introvert preparing for this event. Give me practical, specific scripts for: ${needs}. Short natural phrases a real person would say. Label each clearly with a brief coaching note. Output ONLY the scripts and tips.`;
+  }
+  if (currentMode === 2) {
+    const name = document.getElementById('fu-name').value.trim();
+    if (!name) return null;
+    const where = document.getElementById('fu-where').value.trim();
+    const ctx = document.getElementById('fu-context').value.trim();
+    const next = document.getElementById('fu-next').value.trim();
+    return `[NIMP - FOLLOW-UP]\nName: ${name}, Met: ${where||'recently'}\nDiscussed: ${ctx||'various things'}\nNext step: ${next||'stay in touch'}\nTone: ${selectedTone}\n\nWrite a warm natural follow-up message for an introvert. Reference the conversation. Low-pressure next step. Under 120 words. Output ONLY the message.`;
+  }
+  if (currentMode === 3) {
+    const name = document.getElementById('rc-name').value.trim();
+    if (!name) return null;
+    const time = document.getElementById('rc-time').value.trim();
+    const how = document.getElementById('rc-how').value.trim();
+    const reason = document.getElementById('rc-reason').value.trim();
+    return `[NIMP - RECONNECT]\nName: ${name}, Gap: ${time||'a while'}\nHow we know each other: ${how||'past connection'}\nReason: ${reason||'catching up'}\nTone: ${selectedTone}\n\nWrite a genuine non-awkward reconnection message for an introvert. Acknowledge the gap naturally. Real reason to reach out. Under 100 words. Output ONLY the message.`;
+  }
+  if (currentMode === 4) {
+    const name = document.getElementById('in-name').value.trim();
+    if (!name) return null;
+    const role = document.getElementById('in-role').value.trim();
+    const work = document.getElementById('in-work').value.trim();
+    const ctx = document.getElementById('in-context').value;
+    return `[NIMP - INTRO]\nName: ${name}, Role: ${role||'professional'}\nWhat I do: ${work||'building connections'}\nContext: ${ctx}\nTone: ${selectedTone}\n\nWrite a natural confident personal intro for an introvert for: ${ctx}. Genuine not rehearsed. Under 60 words for in-person, longer for written. Include one brief delivery tip. Output ONLY the intro and tip.`;
+  }
+}
+
+function generate() {
+  const prompt = buildPrompt();
+  const errBox = document.getElementById('err-box');
+  errBox.style.display = 'none';
+  if (!prompt) {
+    errBox.textContent = 'Please fill in the required fields marked with *.';
+    errBox.style.display = 'block';
+    return;
+  }
+  lastPrompt = prompt;
+  const btn = document.getElementById('gen-btn');
+  btn.textContent = 'Working on it…';
+  btn.disabled = true;
+  setTimeout(() => { btn.textContent = 'Get my words ↗'; btn.disabled = false; }, 3000);
+  sendToAI(prompt);
+}
+
+function regenerate() {
+  if (!lastPrompt) return;
+  sendToAI(lastPrompt + '\n\n(Write a different variation.)');
+}
+
+async function sendToAI(prompt) {
+  const errBox = document.getElementById('err-box');
+  const btn = document.getElementById('gen-btn');
+  try {
+    const res = await fetch('/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const msg = data?.content?.[0]?.text?.trim();
+    if (!msg) throw new Error(JSON.stringify(data));
+    showOutput(msg);
+  } catch(e) {
+    errBox.textContent = 'Something went wrong: ' + e.message;
+    errBox.style.display = 'block';
+  } finally {
+    btn.textContent = 'Get my words ↗';
+    btn.disabled = false;
+  }
+}
+
+function showOutput(text) {
+  document.getElementById('output-text').textContent = text;
+  document.getElementById('output-card').style.display = 'block';
+  document.getElementById('copy-btn').textContent = 'Copy';
+  document.getElementById('copy-btn').className = 'action-btn';
+  const cc = document.getElementById('char-count');
+  if (currentMode === 0 && document.getElementById('o-platform').value === 'LinkedIn') {
+    const over = text.length > 300;
+    cc.textContent = text.length + ' / 300 chars' + (over ? ' — consider trimming' : ' ✓');
+    cc.className = 'char-count' + (over ? ' over' : '');
+  } else {
+    const words = text.split(/\s+/).filter(Boolean).length;
+    cc.textContent = words + ' words';
+    cc.className = 'char-count';
+  }
+  document.getElementById('output-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function copyMsg() {
+  const text = document.getElementById('output-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = 'Copied! ✓';
+    btn.className = 'action-btn copied';
+    setTimeout(() => { btn.textContent = 'Copy'; btn.className = 'action-btn'; }, 2000);
+  });
+}
+
+function saveMsg() {
+  const text = document.getElementById('output-text').textContent;
+  if (!text) return;
+  savedMessages.unshift({ text, mode: MODE_NAMES[currentMode], time: new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) });
+  renderHistory();
+  const btn = document.getElementById('save-btn');
+  btn.textContent = '★ Saved!';
+  setTimeout(() => btn.textContent = '★ Save', 1500);
+}
+
+function renderHistory() {
+  const card = document.getElementById('history-card');
+  const list = document.getElementById('history-list');
+  if (!savedMessages.length) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+  list.innerHTML = savedMessages.map((h,i) => `
+    <div class="hist-item">
+      <div class="hist-meta">${h.mode} · ${h.time}</div>
+      <div style="margin-bottom:10px;">${h.text}</div>
+      <button class="action-btn" onclick="copyHist(${i})">Copy</button>
+    </div>`).join('');
+}
+
+function copyHist(i) {
+  navigator.clipboard.writeText(savedMessages[i].text).then(() => {
+    const btns = document.querySelectorAll('#history-list .action-btn');
+    btns[i].textContent = 'Copied!';
+    setTimeout(() => btns[i].textContent = 'Copy', 1500);
+  });
+}
+
+function clearHistory() {
+  savedMessages = [];
+  renderHistory();
+}
+
+updateTip();
+</script>
+</body>
+</html>
