@@ -119,10 +119,7 @@
     color: var(--ink);
   }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--teal);
-  }
+  .hero h1 em { font-style: italic; color: var(--teal); }
 
   .hero p {
     font-size: 18px;
@@ -148,15 +145,8 @@
     margin-bottom: 12px;
   }
 
-  .hero-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  }
-
-  .hero-sub {
-    font-size: 13px;
-    color: var(--muted);
-  }
+  .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .hero-sub { font-size: 13px; color: var(--muted); }
 
   /* STATS */
   .stats {
@@ -171,55 +161,17 @@
   }
 
   .stat-item { text-align: center; }
-  .stat-num {
-    font-family: 'Lora', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--ink);
-    display: block;
-  }
+  .stat-num { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--ink); display: block; }
   .stat-label { font-size: 13px; color: var(--muted); }
 
   /* MODES SECTION */
-  .modes-section {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 64px 24px;
-    animation: fadeUp 0.7s 0.15s ease both;
-  }
+  .modes-section { max-width: 760px; margin: 0 auto; padding: 64px 24px; animation: fadeUp 0.7s 0.15s ease both; }
 
-  .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-align: center;
-    margin-bottom: 12px;
-  }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 12px; }
+  .section-title { font-family: 'Lora', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 600; text-align: center; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .section-sub { text-align: center; color: var(--muted); font-size: 15px; margin-bottom: 40px; font-weight: 300; }
 
-  .section-title {
-    font-family: 'Lora', serif;
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-
-  .section-sub {
-    text-align: center;
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 40px;
-    font-weight: 300;
-  }
-
-  .modes-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
+  .modes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
   .mode-card {
     background: var(--white);
@@ -233,77 +185,22 @@
     align-items: flex-start;
   }
 
-  .mode-card:hover {
-    border-color: var(--teal);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  }
-
+  .mode-card:hover { border-color: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
   .mode-card.full { grid-column: 1 / -1; }
 
-  .mode-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
+  .mode-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
 
-  .mode-card h3 {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    color: var(--ink);
-  }
-
-  .mode-card p {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+  .mode-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; color: var(--ink); }
+  .mode-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
   /* QUOTE */
-  .quote-section {
-    background: var(--ink);
-    color: var(--bg);
-    padding: 64px 24px;
-    text-align: center;
-  }
-
-  .quote-text {
-    font-family: 'Lora', serif;
-    font-size: clamp(18px, 3vw, 26px);
-    font-style: italic;
-    font-weight: 400;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    line-height: 1.5;
-    opacity: 0.95;
-  }
-
-  .quote-author {
-    font-size: 13px;
-    opacity: 0.6;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+  .quote-section { background: var(--ink); color: var(--bg); padding: 64px 24px; text-align: center; }
+  .quote-text { font-family: 'Lora', serif; font-size: clamp(18px, 3vw, 26px); font-style: italic; font-weight: 400; max-width: 600px; margin: 0 auto 20px; line-height: 1.5; opacity: 0.95; }
+  .quote-author { font-size: 13px; opacity: 0.6; letter-spacing: 1px; text-transform: uppercase; }
 
   /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 32px 24px;
-    font-size: 13px;
-    color: var(--muted);
-    border-top: 1px solid var(--border);
-  }
-
-  footer strong {
-    color: var(--ink);
-    font-weight: 500;
-  }
+  footer { text-align: center; padding: 32px 24px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
+  footer strong { color: var(--ink); font-weight: 500; }
 
   /* ===== APP ===== */
   .app-nav {
@@ -315,12 +212,7 @@
     background: var(--white);
   }
 
-  .app-logo {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
+  .app-logo { font-family: 'Lora', serif; font-size: 18px; font-weight: 600; }
   .app-logo span { color: var(--teal); }
 
   .back-btn {
@@ -337,19 +229,30 @@
 
   .back-btn:hover { border-color: var(--ink); color: var(--ink); }
 
-  .app-body {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 32px 24px 80px;
+  .app-body { max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  /* USAGE COUNTER BAR */
+  .usage-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: var(--muted);
   }
 
-  /* MODE PILLS */
-  .pills-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 24px;
-  }
+  .usage-dots { display: flex; gap: 5px; }
+  .usage-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+  .usage-dot.used { background: var(--teal); }
+
+  .usage-signin-link { color: var(--teal); font-size: 12px; cursor: pointer; font-weight: 500; text-decoration: underline; }
+
+  /* PILLS */
+  .pills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 
   .pill {
     padding: 8px 16px;
@@ -364,43 +267,17 @@
     font-family: 'DM Sans', sans-serif;
   }
 
-  .pill.active {
-    background: var(--ink);
-    color: var(--bg);
-    border-color: var(--ink);
-  }
+  .pill.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
   /* CARD */
-  .form-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 16px;
-  }
+  .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 16px; }
 
-  .tip-box {
-    background: var(--teal-light);
-    border-radius: 10px;
-    padding: 12px 16px;
-    font-size: 13px;
-    color: var(--teal-dark);
-    margin-bottom: 24px;
-    line-height: 1.55;
-  }
+  .tip-box { background: var(--teal-light); border-radius: 10px; padding: 12px 16px; font-size: 13px; color: var(--teal-dark); margin-bottom: 24px; line-height: 1.55; }
 
   .field-group { margin-bottom: 16px; }
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
 
-  label {
-    display: block;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
+  label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
 
   input, textarea, select {
     width: 100%;
@@ -417,12 +294,8 @@
     appearance: none;
   }
 
-  input:focus, textarea:focus, select:focus {
-    border-color: var(--teal);
-    box-shadow: 0 0 0 3px rgba(29,158,117,0.1);
-  }
+  input:focus, textarea:focus, select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(29,158,117,0.1); }
 
-  /* CHIPS */
   .chip-group { display: flex; flex-wrap: wrap; gap: 8px; }
 
   .chip {
@@ -438,19 +311,9 @@
     font-family: 'DM Sans', sans-serif;
   }
 
-  .chip.tone.selected {
-    border-color: var(--teal);
-    background: var(--teal-light);
-    color: var(--teal-dark);
-  }
+  .chip.tone.selected { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); }
+  .chip.sub.selected { border-color: var(--purple); background: var(--purple-light); color: var(--purple-dark); }
 
-  .chip.sub.selected {
-    border-color: var(--purple);
-    background: var(--purple-light);
-    color: var(--purple-dark);
-  }
-
-  /* GENERATE BTN */
   .gen-btn {
     width: 100%;
     padding: 15px;
@@ -466,51 +329,15 @@
     margin-top: 8px;
   }
 
-  .gen-btn:hover:not(:disabled) {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  }
-
+  .gen-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
   .gen-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
-  /* ERROR */
-  .error-box {
-    display: none;
-    margin-top: 12px;
-    padding: 12px 16px;
-    background: #fff5f5;
-    border: 1px solid #fcc;
-    border-radius: 10px;
-    font-size: 13px;
-    color: #c0392b;
-  }
+  .error-box { display: none; margin-top: 12px; padding: 12px 16px; background: #fff5f5; border: 1px solid #fcc; border-radius: 10px; font-size: 13px; color: #c0392b; }
 
-  /* OUTPUT */
-  .output-card {
-    display: none;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    margin-bottom: 16px;
-    animation: fadeUp 0.4s ease both;
-  }
+  .output-card { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 28px; margin-bottom: 16px; animation: fadeUp 0.4s ease both; }
 
-  .output-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-  }
-
-  .output-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
+  .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .output-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
   .output-actions { display: flex; gap: 8px; }
 
   .action-btn {
@@ -529,60 +356,222 @@
   .action-btn:hover { border-color: var(--ink); color: var(--ink); }
   .action-btn.copied { border-color: var(--teal); color: var(--teal); }
 
-  .output-text {
-    background: var(--bg);
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-    padding: 18px 20px;
-    font-size: 15px;
-    line-height: 1.75;
-    white-space: pre-wrap;
-    color: var(--ink);
-    margin-bottom: 10px;
-  }
-
-  .char-count {
-    font-size: 11px;
-    color: var(--muted);
-    text-align: right;
-  }
-
+  .output-text { background: var(--bg); border: 1.5px solid var(--border); border-radius: 12px; padding: 18px 20px; font-size: 15px; line-height: 1.75; white-space: pre-wrap; color: var(--ink); margin-bottom: 10px; }
+  .char-count { font-size: 11px; color: var(--muted); text-align: right; }
   .char-count.over { color: #c0392b; }
 
-  /* HISTORY */
-  .history-card {
+  .history-card { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 24px; }
+  .history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .hist-item { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; font-size: 13px; line-height: 1.65; color: var(--ink); }
+  .hist-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+
+  /* ===== AUTH MODAL ===== */
+  .modal-overlay {
     display: none;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 20px;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,24,20,0.5);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
     padding: 24px;
   }
 
-  .history-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeUp 0.3s ease both;
   }
 
-  .hist-item {
-    background: var(--bg);
+  .modal-logo { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 4px; }
+  .modal-logo span { color: var(--teal); }
+  .modal-tagline { text-align: center; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+
+  .modal-title { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+
+  .modal input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
     border-radius: 10px;
-    padding: 14px 16px;
-    margin-bottom: 10px;
-    font-size: 13px;
-    line-height: 1.65;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    background: var(--bg);
     color: var(--ink);
+    margin-bottom: 10px;
+    outline: none;
   }
 
-  .hist-meta {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--muted);
-    margin-bottom: 6px;
+  .modal input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(29,158,117,0.1); }
+
+  .modal-btn-primary {
+    width: 100%;
+    padding: 13px;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: opacity 0.2s;
   }
+
+  .modal-btn-primary:hover { opacity: 0.88; }
+
+  .modal-btn-teal {
+    width: 100%;
+    padding: 12px;
+    background: var(--white);
+    color: var(--teal);
+    border: 1.5px solid var(--teal);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+  }
+
+  .modal-btn-teal:hover { background: var(--teal-light); }
+
+  .modal-btn-ghost {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .modal-btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  .modal-divider { text-align: center; font-size: 12px; color: var(--muted); margin: 8px 0; position: relative; }
+  .modal-divider::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 0; }
+  .modal-divider span { background: var(--white); padding: 0 10px; position: relative; z-index: 1; }
+
+  .modal-switch { text-align: center; font-size: 12px; color: var(--muted); margin-top: 14px; }
+  .modal-switch a { color: var(--teal); cursor: pointer; text-decoration: underline; font-weight: 500; }
+
+  .modal-guest-note { text-align: center; font-size: 11px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+  .modal-error { display: none; background: #fff5f5; border: 1px solid #fcc; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #c0392b; margin-bottom: 10px; }
+
+  /* ===== LIMIT MODAL ===== */
+  .limit-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,24,20,0.5);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .limit-overlay.open { display: flex; }
+
+  .limit-modal {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: fadeUp 0.3s ease both;
+  }
+
+  .limit-emoji { font-size: 32px; margin-bottom: 12px; }
+  .limit-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .limit-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+
+  .limit-btn-share {
+    width: 100%;
+    padding: 13px;
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: opacity 0.2s;
+  }
+
+  .limit-btn-share:hover { opacity: 0.88; }
+
+  .limit-btn-upgrade {
+    width: 100%;
+    padding: 13px;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: opacity 0.2s;
+  }
+
+  .limit-btn-upgrade:hover { opacity: 0.88; }
+
+  .limit-later { font-size: 12px; color: var(--muted); cursor: pointer; text-decoration: underline; margin-top: 4px; display: inline-block; }
+
+  .limit-perks { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; text-align: left; }
+  .limit-perk { font-size: 12px; color: var(--ink); padding: 3px 0; display: flex; gap: 8px; }
+  .limit-perk-check { color: var(--teal); font-weight: 600; }
+
+  /* USER CHIP in app nav */
+  .user-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--teal-light);
+    border: 1px solid var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--teal-dark);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .signout-btn {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .signout-btn:hover { color: var(--ink); }
 
   /* ANIMATIONS */
   @keyframes fadeUp {
@@ -620,82 +609,39 @@
   </section>
 
   <div class="stats">
-    <div class="stat-item">
-      <span class="stat-num">5</span>
-      <span class="stat-label">Networking situations</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">Online + IRL</span>
-      <span class="stat-label">Works everywhere</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">&lt;30s</span>
-      <span class="stat-label">To a ready message</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">100%</span>
-      <span class="stat-label">Built for introverts</span>
-    </div>
+    <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Networking situations</span></div>
+    <div class="stat-item"><span class="stat-num">Online + IRL</span><span class="stat-label">Works everywhere</span></div>
+    <div class="stat-item"><span class="stat-num">&lt;30s</span><span class="stat-label">To a ready message</span></div>
+    <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Built for introverts</span></div>
   </div>
 
   <section class="modes-section">
     <div class="section-label">What NIMP does</div>
     <h2 class="section-title">Every networking situation, covered.</h2>
     <p class="section-sub">Pick your situation and get words that actually sound like you.</p>
-
     <div class="modes-grid">
-      <div class="mode-card" onclick="showApp(0)">
-        <div class="mode-icon" style="background: var(--purple-light);">💬</div>
-        <div>
-          <h3>Online DMs</h3>
-          <p>LinkedIn, Instagram, Twitter, Discord — personalized messages that don't sound like a bot.</p>
-        </div>
-      </div>
-      <div class="mode-card" onclick="showApp(1)">
-        <div class="mode-icon" style="background: var(--teal-light);">🤝</div>
-        <div>
-          <h3>In-person events</h3>
-          <p>Conversation starters, elevator pitch, and how to exit gracefully — so you're never caught off guard.</p>
-        </div>
-      </div>
-      <div class="mode-card" onclick="showApp(2)">
-        <div class="mode-icon" style="background: var(--amber-light);">📩</div>
-        <div>
-          <h3>Following up</h3>
-          <p>Warm, specific follow-ups after meeting someone new — without the awkward "just checking in."</p>
-        </div>
-      </div>
-      <div class="mode-card" onclick="showApp(3)">
-        <div class="mode-icon" style="background: #FBEAF0;">🔄</div>
-        <div>
-          <h3>Reconnecting</h3>
-          <p>Reach back out after months or years — naturally, without it feeling weird.</p>
-        </div>
-      </div>
-      <div class="mode-card full" onclick="showApp(4)">
-        <div class="mode-icon" style="background: #EAF3DE;">✨</div>
-        <div>
-          <h3>Your personal intro</h3>
-          <p>Craft how you introduce yourself in any situation — events, LinkedIn, emails, interviews. Finally have an answer to "so what do you do?"</p>
-        </div>
-      </div>
+      <div class="mode-card" onclick="showApp(0)"><div class="mode-icon" style="background: var(--purple-light);">💬</div><div><h3>Online DMs</h3><p>LinkedIn, Instagram, Twitter, Discord — personalized messages that don't sound like a bot.</p></div></div>
+      <div class="mode-card" onclick="showApp(1)"><div class="mode-icon" style="background: var(--teal-light);">🤝</div><div><h3>In-person events</h3><p>Conversation starters, elevator pitch, and how to exit gracefully — so you're never caught off guard.</p></div></div>
+      <div class="mode-card" onclick="showApp(2)"><div class="mode-icon" style="background: var(--amber-light);">📩</div><div><h3>Following up</h3><p>Warm, specific follow-ups after meeting someone new — without the awkward "just checking in."</p></div></div>
+      <div class="mode-card" onclick="showApp(3)"><div class="mode-icon" style="background: #FBEAF0;">🔄</div><div><h3>Reconnecting</h3><p>Reach back out after months or years — naturally, without it feeling weird.</p></div></div>
+      <div class="mode-card full" onclick="showApp(4)"><div class="mode-icon" style="background: #EAF3DE;">✨</div><div><h3>Your personal intro</h3><p>Craft how you introduce yourself in any situation — events, LinkedIn, emails, interviews. Finally have an answer to "so what do you do?"</p></div></div>
     </div>
   </section>
-<section style="background: #f7f5f0; padding: 40px 24px; text-align: center; border-top: 1px solid #e0dbd2;">
-  <div style="max-width: 480px; margin: 0 auto;">
-    <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #1D9E75; margin-bottom: 10px; font-weight: 500;">Stay in the loop</div>
-    <div style="font-family: 'Lora', serif; font-size: 22px; font-weight: 600; color: #1a1814; margin-bottom: 8px; line-height: 1.3;">NIMP is just getting started.</div>
-    <div style="font-size: 14px; color: #6b6760; margin-bottom: 18px; line-height: 1.6;">New features, networking tips, and updates. No spam, ever.</div>
-    <form action="https://gmail.us6.list-manage.com/subscribe/post?u=efeb3689bfb4008156f13658d&amp;id=ee3096763a&amp;f_id=008134e1f0" method="post" target="_blank" style="display: flex; gap: 8px; max-width: 400px; margin: 0 auto 10px;">
-      <input type="email" name="EMAIL" placeholder="your@email.com" required style="flex: 1; padding: 11px 14px; border-radius: 10px; border: 1.5px solid #e0dbd2; background: #fff; color: #1a1814; font-size: 13px; outline: none; font-family: inherit;" />
-      <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        <input type="text" name="b_efeb3689bfb4008156f13658d_ee3096763a" tabindex="-1" value="">
-      </div>
-      <button type="submit" style="padding: 11px 18px; background: #1D9E75; color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; font-family: inherit;">Notify me</button>
-    </form>
-    <div style="font-size: 11px; color: #6b6760;">Join the quiet ones building real connections. 🤫</div>
-  </div>
-</section>
+
+  <section style="background: #f7f5f0; padding: 40px 24px; text-align: center; border-top: 1px solid #e0dbd2;">
+    <div style="max-width: 480px; margin: 0 auto;">
+      <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #1D9E75; margin-bottom: 10px; font-weight: 500;">Stay in the loop</div>
+      <div style="font-family: 'Lora', serif; font-size: 22px; font-weight: 600; color: #1a1814; margin-bottom: 8px; line-height: 1.3;">NIMP is just getting started.</div>
+      <div style="font-size: 14px; color: #6b6760; margin-bottom: 18px; line-height: 1.6;">New features, networking tips, and updates. No spam, ever.</div>
+      <form action="https://gmail.us6.list-manage.com/subscribe/post?u=efeb3689bfb4008156f13658d&amp;id=ee3096763a&amp;f_id=008134e1f0" method="post" target="_blank" style="display: flex; gap: 8px; max-width: 400px; margin: 0 auto 10px;">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required style="flex: 1; padding: 11px 14px; border-radius: 10px; border: 1.5px solid #e0dbd2; background: #fff; color: #1a1814; font-size: 13px; outline: none; font-family: inherit;" />
+        <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_efeb3689bfb4008156f13658d_ee3096763a" tabindex="-1" value=""></div>
+        <button type="submit" style="padding: 11px 18px; background: #1D9E75; color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; font-family: inherit;">Notify me</button>
+      </form>
+      <div style="font-size: 11px; color: #6b6760;">Join the quiet ones building real connections. 🤫</div>
+    </div>
+  </section>
+
   <section class="quote-section">
     <p class="quote-text">"Networking isn't about being the loudest in the room. It's about being the most intentional. NIMP gives introverts the superpower they already have — just the words to go with it."</p>
     <div class="quote-author">— Latifah · Networking Expert · getnimp.co</div>
@@ -711,10 +657,21 @@
 <div id="app">
   <div class="app-nav">
     <div class="app-logo">NIMP<span>.</span></div>
-    <button class="back-btn" onclick="showLanding()">← Back to home</button>
+    <div class="user-chip" id="user-chip">
+      <button class="back-btn" onclick="showLanding()">← Back to home</button>
+    </div>
   </div>
 
   <div class="app-body">
+
+    <!-- Usage bar -->
+    <div class="usage-bar" id="usage-bar">
+      <span id="usage-label">Loading…</span>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="usage-dots" id="usage-dots"></div>
+        <span class="usage-signin-link" id="usage-signin-link" onclick="openAuthModal()" style="display:none;">Sign up for free →</span>
+      </div>
+    </div>
 
     <div class="pills-wrap">
       <button class="pill active" onclick="switchMode(0,this)">Online DMs</button>
@@ -731,11 +688,7 @@
       <div id="panel-online">
         <div class="field-row">
           <div><label>Their name *</label><input id="o-name" type="text" placeholder="e.g. Jordan Lee" /></div>
-          <div><label>Platform</label>
-            <select id="o-platform">
-              <option>LinkedIn</option><option>Instagram</option><option>Twitter / X</option><option>Discord</option><option>Other</option>
-            </select>
-          </div>
+          <div><label>Platform</label><select id="o-platform"><option>LinkedIn</option><option>Instagram</option><option>Twitter / X</option><option>Discord</option><option>Other</option></select></div>
         </div>
         <div class="field-group"><label>Their role or what they do</label><input id="o-role" type="text" placeholder="e.g. UX designer at a startup" /></div>
         <div class="field-group"><label>Something specific about them</label><textarea id="o-about" rows="2" placeholder="e.g. They posted about burnout in tech, run a newsletter…"></textarea></div>
@@ -747,8 +700,7 @@
         <div class="field-group"><label>Type of event *</label><input id="ip-event" type="text" placeholder="e.g. Tech meetup, industry conference, alumni mixer" /></div>
         <div class="field-group"><label>Your role / background</label><input id="ip-role" type="text" placeholder="e.g. Networking coach, marketer, student" /></div>
         <div class="field-group"><label>Who are you hoping to meet?</label><input id="ip-target" type="text" placeholder="e.g. Founders, hiring managers, collaborators" /></div>
-        <div class="field-group">
-          <label>I need help with</label>
+        <div class="field-group"><label>I need help with</label>
           <div class="chip-group">
             <button class="chip sub selected" onclick="this.classList.toggle('selected')">Conversation starters</button>
             <button class="chip sub" onclick="this.classList.toggle('selected')">Elevator pitch</button>
@@ -785,11 +737,7 @@
         <div class="field-group"><label>Who you help or what you're building</label><textarea id="in-work" rows="2" placeholder="e.g. I help introverts build real connections without the awkwardness…"></textarea></div>
         <div class="field-group"><label>Where will you use this intro?</label>
           <select id="in-context">
-            <option>Networking event (in person)</option>
-            <option>LinkedIn bio</option>
-            <option>Cold email or DM</option>
-            <option>Job interview</option>
-            <option>Online community intro</option>
+            <option>Networking event (in person)</option><option>LinkedIn bio</option><option>Cold email or DM</option><option>Job interview</option><option>Online community intro</option>
           </select>
         </div>
       </div>
@@ -835,8 +783,61 @@
   </div>
 </div>
 
-<script>
+<!-- ===== AUTH MODAL ===== -->
+<div class="modal-overlay" id="auth-overlay">
+  <div class="modal">
+    <div class="modal-logo">NIMP<span>.</span></div>
+    <div class="modal-tagline">Network in my pocket</div>
 
+    <!-- Sign Up View -->
+    <div id="auth-signup">
+      <div class="modal-title">Welcome to NIMP</div>
+      <div class="modal-sub">Create a free account to track your daily messages and save your history.</div>
+      <div class="modal-error" id="signup-error"></div>
+      <input type="email" id="signup-email" placeholder="your@email.com" />
+      <input type="password" id="signup-password" placeholder="Create a password" />
+      <button class="modal-btn-primary" onclick="handleSignup()">Create free account</button>
+      <div class="modal-divider"><span>or</span></div>
+      <button class="modal-btn-ghost" onclick="continueAsGuest()">Continue as guest</button>
+      <div class="modal-guest-note">Guest mode: 5 free messages/day. History won't be saved between visits.</div>
+      <div class="modal-switch">Already have an account? <a onclick="showSignin()">Sign in</a></div>
+    </div>
+
+    <!-- Sign In View -->
+    <div id="auth-signin" style="display:none;">
+      <div class="modal-title">Welcome back</div>
+      <div class="modal-sub">Sign in to your NIMP account.</div>
+      <div class="modal-error" id="signin-error"></div>
+      <input type="email" id="signin-email" placeholder="your@email.com" />
+      <input type="password" id="signin-password" placeholder="Your password" />
+      <button class="modal-btn-primary" onclick="handleSignin()">Sign in</button>
+      <div class="modal-divider"><span>or</span></div>
+      <button class="modal-btn-ghost" onclick="continueAsGuest()">Continue as guest</button>
+      <div class="modal-switch">Don't have an account? <a onclick="showSignup()">Sign up free</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LIMIT MODAL ===== -->
+<div class="limit-overlay" id="limit-overlay">
+  <div class="limit-modal">
+    <div class="limit-emoji">✋</div>
+    <div class="limit-title">You're out of messages</div>
+    <div class="limit-sub">You've used your 5 free messages today. Resets at midnight — or keep going now.</div>
+    <div class="limit-perks">
+      <div style="font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin-bottom:8px; font-weight:500;">Pro unlocks</div>
+      <div class="limit-perk"><span class="limit-perk-check">✓</span> Unlimited messages every day</div>
+      <div class="limit-perk"><span class="limit-perk-check">✓</span> Save & download your answers</div>
+      <div class="limit-perk"><span class="limit-perk-check">✓</span> Body language & posture tips</div>
+      <div class="limit-perk"><span class="limit-perk-check">✓</span> AI Networking Agent</div>
+    </div>
+    <button class="limit-btn-share" onclick="shareNIMP()">Share NIMP & get 1 more message</button>
+    <button class="limit-btn-upgrade" onclick="closeLimitModal()">Upgrade to Pro — $9/mo <span style="font-size:11px;opacity:0.7;">(coming soon)</span></button>
+    <div><span class="limit-later" onclick="closeLimitModal()">Remind me tomorrow</span></div>
+  </div>
+</div>
+
+<script>
 const TIPS = [
   "Lead with curiosity about them, not a pitch about you. The best DMs feel like the start of a real conversation.",
   "Introverts thrive at events when they have a plan. Prepare 2-3 questions in advance and aim for depth over volume.",
@@ -847,12 +848,220 @@ const TIPS = [
 
 const PANELS = ['panel-online','panel-inperson','panel-followup','panel-reconnect','panel-intro'];
 const MODE_NAMES = ['Online DM','In-person','Follow-up','Reconnect','Intro'];
+const DAILY_LIMIT = 5;
 
 let currentMode = 0;
 let selectedTone = 'Warm & calm';
 let savedMessages = [];
 let lastPrompt = '';
 
+// ─── Auth State ───────────────────────────────────────────────────
+let currentUser = null; // { id, email } or null for guest
+
+function getGuestCount() {
+  const data = JSON.parse(localStorage.getItem('nimp_guest') || '{}');
+  const today = new Date().toISOString().split('T')[0];
+  if (data.date !== today) return 0;
+  return data.count || 0;
+}
+
+function setGuestCount(n) {
+  const today = new Date().toISOString().split('T')[0];
+  localStorage.setItem('nimp_guest', JSON.stringify({ date: today, count: n }));
+}
+
+function getBonusCount() {
+  return parseInt(localStorage.getItem('nimp_bonus') || '0');
+}
+
+function setBonusCount(n) {
+  localStorage.setItem('nimp_bonus', String(n));
+}
+
+// ─── Usage UI ────────────────────────────────────────────────────
+async function refreshUsageBar() {
+  const bar = document.getElementById('usage-bar');
+  const label = document.getElementById('usage-label');
+  const dotsEl = document.getElementById('usage-dots');
+  const signinLink = document.getElementById('usage-signin-link');
+
+  let count = 0;
+  let limit = DAILY_LIMIT + getBonusCount();
+
+  if (currentUser) {
+    try {
+      const res = await fetch('/api/usage/check', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: currentUser.id })
+      });
+      const data = await res.json();
+      count = data.count || 0;
+      limit = data.limit + getBonusCount();
+    } catch(e) {}
+    signinLink.style.display = 'none';
+  } else {
+    count = getGuestCount();
+    signinLink.style.display = count >= 3 ? 'inline' : 'none';
+  }
+
+  label.textContent = `${count} of ${limit} messages used today`;
+
+  dotsEl.innerHTML = '';
+  for (let i = 0; i < limit; i++) {
+    const d = document.createElement('div');
+    d.className = 'usage-dot' + (i < count ? ' used' : '');
+    dotsEl.appendChild(d);
+  }
+}
+
+// ─── Auth Modal ──────────────────────────────────────────────────
+function openAuthModal() {
+  document.getElementById('auth-overlay').classList.add('open');
+  showSignup();
+}
+
+function closeAuthModal() {
+  document.getElementById('auth-overlay').classList.remove('open');
+}
+
+function showSignup() {
+  document.getElementById('auth-signup').style.display = 'block';
+  document.getElementById('auth-signin').style.display = 'none';
+}
+
+function showSignin() {
+  document.getElementById('auth-signup').style.display = 'none';
+  document.getElementById('auth-signin').style.display = 'block';
+}
+
+async function handleSignup() {
+  const email = document.getElementById('signup-email').value.trim();
+  const password = document.getElementById('signup-password').value;
+  const errEl = document.getElementById('signup-error');
+  errEl.style.display = 'none';
+
+  if (!email || !password) { errEl.textContent = 'Please enter your email and a password.'; errEl.style.display = 'block'; return; }
+  if (password.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = 'block'; return; }
+
+  try {
+    const res = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if (data.error) { errEl.textContent = data.error; errEl.style.display = 'block'; return; }
+    currentUser = { id: data.user.id, email: data.user.email };
+    onAuthSuccess();
+  } catch(e) {
+    errEl.textContent = 'Something went wrong. Please try again.';
+    errEl.style.display = 'block';
+  }
+}
+
+async function handleSignin() {
+  const email = document.getElementById('signin-email').value.trim();
+  const password = document.getElementById('signin-password').value;
+  const errEl = document.getElementById('signin-error');
+  errEl.style.display = 'none';
+
+  if (!email || !password) { errEl.textContent = 'Please enter your email and password.'; errEl.style.display = 'block'; return; }
+
+  try {
+    const res = await fetch('/api/auth/signin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if (data.error) { errEl.textContent = data.error; errEl.style.display = 'block'; return; }
+    currentUser = { id: data.user.id, email: data.user.email };
+    onAuthSuccess();
+  } catch(e) {
+    errEl.textContent = 'Something went wrong. Please try again.';
+    errEl.style.display = 'block';
+  }
+}
+
+function onAuthSuccess() {
+  closeAuthModal();
+  updateUserChip();
+  refreshUsageBar();
+}
+
+function continueAsGuest() {
+  closeAuthModal();
+  updateUserChip();
+  refreshUsageBar();
+}
+
+function updateUserChip() {
+  const chip = document.getElementById('user-chip');
+  if (currentUser) {
+    const initial = currentUser.email.charAt(0).toUpperCase();
+    chip.innerHTML = `
+      <div class="user-avatar" title="${currentUser.email}">${initial}</div>
+      <button class="signout-btn" onclick="signOut()">Sign out</button>
+      <button class="back-btn" onclick="showLanding()" style="margin-left:8px;">← Back</button>
+    `;
+  } else {
+    chip.innerHTML = `
+      <button class="back-btn" onclick="showLanding()">← Back to home</button>
+    `;
+  }
+}
+
+function signOut() {
+  currentUser = null;
+  updateUserChip();
+  refreshUsageBar();
+}
+
+// ─── Limit Modal ──────────────────────────────────────────────────
+function openLimitModal() {
+  document.getElementById('limit-overlay').classList.add('open');
+}
+
+function closeLimitModal() {
+  document.getElementById('limit-overlay').classList.remove('open');
+}
+
+function shareNIMP() {
+  const url = 'https://www.getnimp.co';
+  const text = 'I\'ve been using NIMP to help me network without the awkwardness 👀 It\'s free — check it out:';
+  if (navigator.share) {
+    navigator.share({ title: 'NIMP — Network In My Pocket', text, url });
+  } else {
+    navigator.clipboard.writeText(text + ' ' + url).then(() => {
+      alert('Link copied! Share it and your bonus message will be added.');
+    });
+  }
+  // Grant bonus generation
+  setBonusCount(getBonusCount() + 1);
+  closeLimitModal();
+  refreshUsageBar();
+}
+
+// ─── Usage Check ─────────────────────────────────────────────────
+async function checkCanGenerate() {
+  const bonus = getBonusCount();
+  const effectiveLimit = DAILY_LIMIT + bonus;
+
+  if (currentUser) {
+    const res = await fetch('/api/usage/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: currentUser.id })
+    });
+    const data = await res.json();
+    return (data.count || 0) < effectiveLimit;
+  } else {
+    return getGuestCount() < effectiveLimit;
+  }
+}
+
+// ─── App Navigation ──────────────────────────────────────────────
 function showApp(mode) {
   document.getElementById('landing').style.display = 'none';
   document.getElementById('app').style.display = 'block';
@@ -862,6 +1071,15 @@ function showApp(mode) {
     switchMode(mode, pills[mode]);
   }
   updateTip();
+  updateUserChip();
+  refreshUsageBar();
+
+  // Show auth modal on first visit if not guest/signed in
+  const hasVisited = localStorage.getItem('nimp_visited');
+  if (!hasVisited && !currentUser) {
+    localStorage.setItem('nimp_visited', '1');
+    setTimeout(() => openAuthModal(), 600);
+  }
 }
 
 function showLanding() {
@@ -938,21 +1156,30 @@ function buildPrompt() {
   }
 }
 
-function generate() {
+async function generate() {
   const prompt = buildPrompt();
   const errBox = document.getElementById('err-box');
   errBox.style.display = 'none';
+
   if (!prompt) {
     errBox.textContent = 'Please fill in the required fields marked with *.';
     errBox.style.display = 'block';
     return;
   }
+
+  // Check usage limit
+  const canGenerate = await checkCanGenerate();
+  if (!canGenerate) {
+    openLimitModal();
+    return;
+  }
+
   lastPrompt = prompt;
   const btn = document.getElementById('gen-btn');
   btn.textContent = 'Working on it…';
   btn.disabled = true;
-  setTimeout(() => { btn.textContent = 'Get my words ↗'; btn.disabled = false; }, 3000);
-  sendToAI(prompt);
+
+  await sendToAI(prompt);
 }
 
 function regenerate() {
@@ -963,18 +1190,32 @@ function regenerate() {
 async function sendToAI(prompt) {
   const errBox = document.getElementById('err-box');
   const btn = document.getElementById('gen-btn');
+
   try {
+    const body = { messages: [{ role: 'user', content: prompt }] };
+    if (currentUser) body.userId = currentUser.id;
+
     const res = await fetch('/api/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        messages: [{ role: 'user', content: prompt }]
-      })
+      body: JSON.stringify(body)
     });
+
     const data = await res.json();
+
+    if (res.status === 429 || data.error === 'daily_limit_reached') {
+      openLimitModal();
+      return;
+    }
+
     const msg = data?.content?.[0]?.text?.trim();
     if (!msg) throw new Error(JSON.stringify(data));
+
+    // Increment guest count
+    if (!currentUser) setGuestCount(getGuestCount() + 1);
+
     showOutput(msg);
+    refreshUsageBar();
   } catch(e) {
     errBox.textContent = 'Something went wrong: ' + e.message;
     errBox.style.display = 'block';
@@ -1043,10 +1284,12 @@ function copyHist(i) {
   });
 }
 
-function clearHistory() {
-  savedMessages = [];
-  renderHistory();
-}
+function clearHistory() { savedMessages = []; renderHistory(); }
+
+// Close modals on overlay click
+document.getElementById('auth-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeAuthModal();
+});
 
 updateTip();
 </script>
