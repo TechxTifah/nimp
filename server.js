@@ -138,7 +138,7 @@ app.post('/api/generate', async (req, res) => {
       if (count >= DAILY_LIMIT) {
         return res.status(429).json({
           error: 'daily_limit_reached',
-          message: 'You've used your 5 free messages today.'
+          message: 'You have used your 5 free messages today.'
         });
       }
     }
