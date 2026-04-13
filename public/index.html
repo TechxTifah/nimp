@@ -1001,13 +1001,17 @@ function updateUserChip() {
   if (currentUser) {
     const initial = currentUser.email.charAt(0).toUpperCase();
     chip.innerHTML = `
-      <div class="user-avatar" title="${currentUser.email}">${initial}</div>
-      <button class="signout-btn" onclick="signOut()">Sign out</button>
-      <button class="back-btn" onclick="showLanding()" style="margin-left:8px;">← Back</button>
+      <button class="back-btn" onclick="showLanding()">← Back</button>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="user-avatar" title="${currentUser.email}">${initial}</div>
+        <span style="font-size:12px;color:#6b6760;">${currentUser.email}</span>
+        <button onclick="signOut()" style="background:transparent;border:none;font-size:12px;color:#6b6760;cursor:pointer;text-decoration:underline;font-family:'DM Sans',sans-serif;">Sign out</button>
+      </div>
     `;
   } else {
     chip.innerHTML = `
-      <button class="back-btn" onclick="showLanding()">← Back to home</button>
+      <button class="back-btn" onclick="showLanding()">← Back</button>
+      <button onclick="openAuthModal()" style="background:#1a1814;color:#f7f5f0;border:none;border-radius:10px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;">Sign in / Sign up</button>
     `;
   }
 }
