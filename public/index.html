@@ -33,165 +33,70 @@
     --amber-light: #FAEEDA;
   }
 
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
+  body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; font-size: 16px; line-height: 1.6; }
   a { color: inherit; text-decoration: none; }
 
   /* NAV */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(247,245,240,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 40px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    font-family: 'Lora', serif;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.3px;
-  }
-
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 40px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
   .nav-logo span { color: var(--teal); }
-
-  .nav-cta {
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    border-radius: 100px;
-    padding: 8px 20px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-
+  .nav-cta { background: var(--ink); color: var(--bg); border: none; border-radius: 100px; padding: 8px 20px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; }
   .nav-cta:hover { opacity: 0.85; }
 
   /* PAGES */
   #landing { display: block; }
   #app { display: none; }
+  #success-page { display: none; }
 
   /* HERO */
-  .hero {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 80px 24px 64px;
-    text-align: center;
-    animation: fadeUp 0.7s ease both;
-  }
-
-  .hero-eyebrow {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--teal);
-    background: var(--teal-light);
-    padding: 5px 14px;
-    border-radius: 100px;
-    margin-bottom: 24px;
-  }
-
-  .hero h1 {
-    font-family: 'Lora', serif;
-    font-size: clamp(36px, 6vw, 60px);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-    color: var(--ink);
-  }
-
+  .hero { max-width: 760px; margin: 0 auto; padding: 80px 24px 64px; text-align: center; animation: fadeUp 0.7s ease both; }
+  .hero-eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); background: var(--teal-light); padding: 5px 14px; border-radius: 100px; margin-bottom: 24px; }
+  .hero h1 { font-family: 'Lora', serif; font-size: clamp(36px, 6vw, 60px); font-weight: 600; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; color: var(--ink); }
   .hero h1 em { font-style: italic; color: var(--teal); }
-
-  .hero p {
-    font-size: 18px;
-    color: var(--muted);
-    max-width: 480px;
-    margin: 0 auto 36px;
-    font-weight: 300;
-    line-height: 1.7;
-  }
-
-  .hero-btn {
-    display: inline-block;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    border-radius: 12px;
-    padding: 16px 40px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-bottom: 12px;
-  }
-
+  .hero p { font-size: 18px; color: var(--muted); max-width: 480px; margin: 0 auto 36px; font-weight: 300; line-height: 1.7; }
+  .hero-btn { display: inline-block; background: var(--ink); color: var(--bg); border: none; border-radius: 12px; padding: 16px 40px; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer; transition: all 0.2s; margin-bottom: 12px; }
   .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
   .hero-sub { font-size: 13px; color: var(--muted); }
 
   /* STATS */
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-    padding: 40px 24px;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: var(--white);
-    animation: fadeUp 0.7s 0.1s ease both;
-  }
-
+  .stats { display: flex; justify-content: center; gap: 48px; padding: 40px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--white); animation: fadeUp 0.7s 0.1s ease both; }
   .stat-item { text-align: center; }
   .stat-num { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--ink); display: block; }
   .stat-label { font-size: 13px; color: var(--muted); }
 
   /* MODES SECTION */
   .modes-section { max-width: 760px; margin: 0 auto; padding: 64px 24px; animation: fadeUp 0.7s 0.15s ease both; }
-
   .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 12px; }
   .section-title { font-family: 'Lora', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 600; text-align: center; margin-bottom: 8px; letter-spacing: -0.5px; }
   .section-sub { text-align: center; color: var(--muted); font-size: 15px; margin-bottom: 40px; font-weight: 300; }
-
   .modes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-
-  .mode-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-
+  .mode-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; cursor: pointer; transition: all 0.2s; display: flex; gap: 16px; align-items: flex-start; }
   .mode-card:hover { border-color: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
   .mode-card.full { grid-column: 1 / -1; }
-
   .mode-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-
   .mode-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; color: var(--ink); }
   .mode-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* PRICING SECTION */
+  .pricing-section { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+  .plan-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .plan-card.featured { border: 2px solid var(--teal); }
+  .plan-head { padding: 24px 24px 16px; }
+  .plan-name { font-size: 14px; font-weight: 600; color: var(--ink); display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .popular-tag { background: var(--teal-light); color: var(--teal-dark); font-size: 10px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+  .plan-price { font-family: 'Lora', serif; font-size: 36px; font-weight: 600; color: var(--ink); }
+  .plan-price span { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; color: var(--muted); }
+  .plan-price-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .plan-features { padding: 16px 24px 24px; border-top: 1px solid var(--border); }
+  .plan-feat { font-size: 13px; color: var(--ink); padding: 4px 0; display: flex; gap: 8px; align-items: flex-start; }
+  .plan-feat-locked { font-size: 13px; color: var(--muted); padding: 4px 0; display: flex; gap: 8px; align-items: flex-start; }
+  .feat-check { color: var(--teal); font-weight: 600; flex-shrink: 0; }
+  .feat-lock { color: var(--border); flex-shrink: 0; }
+  .plan-btn { width: 100%; padding: 13px; background: var(--ink); color: var(--bg); border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 16px; transition: opacity 0.2s; }
+  .plan-btn:hover { opacity: 0.88; }
+  .plan-btn-teal { width: 100%; padding: 13px; background: var(--teal); color: var(--white); border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 16px; transition: opacity 0.2s; }
+  .plan-btn-teal:hover { opacity: 0.88; }
 
   /* QUOTE */
   .quote-section { background: var(--ink); color: var(--bg); padding: 64px 24px; text-align: center; }
@@ -202,384 +107,128 @@
   footer { text-align: center; padding: 32px 24px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
   footer strong { color: var(--ink); font-weight: 500; }
 
-  /* ===== APP ===== */
-  .app-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    border-bottom: 1px solid var(--border);
-    background: var(--white);
-  }
-
+  /* APP */
+  .app-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--border); background: var(--white); }
   .app-logo { font-family: 'Lora', serif; font-size: 18px; font-weight: 600; }
   .app-logo span { color: var(--teal); }
-
-  .back-btn {
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    padding: 6px 16px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
+  .back-btn { background: transparent; border: 1px solid var(--border); border-radius: 100px; padding: 6px 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--muted); cursor: pointer; transition: all 0.2s; }
   .back-btn:hover { border-color: var(--ink); color: var(--ink); }
-
   .app-body { max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; }
 
-  /* USAGE COUNTER BAR */
-  .usage-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 10px 16px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
+  /* USAGE BAR */
+  .usage-bar { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; margin-bottom: 20px; font-size: 12px; color: var(--muted); }
   .usage-dots { display: flex; gap: 5px; }
   .usage-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
   .usage-dot.used { background: var(--teal); }
-
   .usage-signin-link { color: var(--teal); font-size: 12px; cursor: pointer; font-weight: 500; text-decoration: underline; }
+  .pro-unlimited-badge { background: var(--teal-light); color: var(--teal-dark); font-size: 11px; padding: 2px 10px; border-radius: 20px; font-weight: 500; }
 
   /* PILLS */
   .pills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-
-  .pill {
-    padding: 8px 16px;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: var(--white);
-    color: var(--muted);
-    font-family: 'DM Sans', sans-serif;
-  }
-
+  .pill { padding: 8px 16px; border: 1px solid var(--border); border-radius: 100px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: var(--white); color: var(--muted); font-family: 'DM Sans', sans-serif; }
   .pill.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-  /* CARD */
+  /* FORM */
   .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 16px; }
-
   .tip-box { background: var(--teal-light); border-radius: 10px; padding: 12px 16px; font-size: 13px; color: var(--teal-dark); margin-bottom: 24px; line-height: 1.55; }
-
   .field-group { margin-bottom: 16px; }
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-
   label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-
-  input, textarea, select {
-    width: 100%;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    border: 1.5px solid var(--border);
-    border-radius: 10px;
-    padding: 11px 14px;
-    background: var(--bg);
-    color: var(--ink);
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-    resize: none;
-    appearance: none;
-  }
-
+  input, textarea, select { width: 100%; font-family: 'DM Sans', sans-serif; font-size: 14px; border: 1.5px solid var(--border); border-radius: 10px; padding: 11px 14px; background: var(--bg); color: var(--ink); transition: border-color 0.2s, box-shadow 0.2s; outline: none; resize: none; appearance: none; }
   input:focus, textarea:focus, select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(29,158,117,0.1); }
-
   .chip-group { display: flex; flex-wrap: wrap; gap: 8px; }
-
-  .chip {
-    padding: 7px 14px;
-    border: 1.5px solid var(--border);
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-    background: transparent;
-    color: var(--muted);
-    font-family: 'DM Sans', sans-serif;
-  }
-
+  .chip { padding: 7px 14px; border: 1.5px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; background: transparent; color: var(--muted); font-family: 'DM Sans', sans-serif; }
   .chip.tone.selected { border-color: var(--teal); background: var(--teal-light); color: var(--teal-dark); }
   .chip.sub.selected { border-color: var(--purple); background: var(--purple-light); color: var(--purple-dark); }
-
-  .gen-btn {
-    width: 100%;
-    padding: 15px;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    border-radius: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-top: 8px;
-  }
-
+  .gen-btn { width: 100%; padding: 15px; background: var(--ink); color: var(--bg); border: none; border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; margin-top: 8px; }
   .gen-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
   .gen-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-
   .error-box { display: none; margin-top: 12px; padding: 12px 16px; background: #fff5f5; border: 1px solid #fcc; border-radius: 10px; font-size: 13px; color: #c0392b; }
 
+  /* OUTPUT */
   .output-card { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 28px; margin-bottom: 16px; animation: fadeUp 0.4s ease both; }
-
   .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
   .output-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
   .output-actions { display: flex; gap: 8px; }
-
-  .action-btn {
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 6px 14px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
+  .action-btn { background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.15s; }
   .action-btn:hover { border-color: var(--ink); color: var(--ink); }
   .action-btn.copied { border-color: var(--teal); color: var(--teal); }
-
   .output-text { background: var(--bg); border: 1.5px solid var(--border); border-radius: 12px; padding: 18px 20px; font-size: 15px; line-height: 1.75; white-space: pre-wrap; color: var(--ink); margin-bottom: 10px; }
   .char-count { font-size: 11px; color: var(--muted); text-align: right; }
   .char-count.over { color: #c0392b; }
 
+  /* BODY LANGUAGE TIPS */
+  .body-tips-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-bottom: 16px; }
+  .body-tips-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .body-tip { font-size: 13px; color: var(--ink); padding: 8px 0; border-bottom: 1px solid var(--border); line-height: 1.6; display: flex; gap: 10px; }
+  .body-tip:last-child { border-bottom: none; }
+  .tip-icon { color: var(--teal); flex-shrink: 0; }
+  .body-tips-locked { background: var(--bg); border-radius: 10px; padding: 16px; text-align: center; margin-top: 8px; }
+  .body-tips-blur { filter: blur(4px); user-select: none; pointer-events: none; font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
+
+  /* HISTORY */
   .history-card { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 24px; }
   .history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
   .hist-item { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; font-size: 13px; line-height: 1.65; color: var(--ink); }
   .hist-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
 
-  /* ===== AUTH MODAL ===== */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(26,24,20,0.5);
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-
+  /* AUTH MODAL */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(26,24,20,0.5); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
   .modal-overlay.open { display: flex; }
-
-  .modal {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 32px;
-    width: 100%;
-    max-width: 400px;
-    animation: fadeUp 0.3s ease both;
-  }
-
+  .modal { background: var(--white); border-radius: 20px; padding: 32px; width: 100%; max-width: 400px; animation: fadeUp 0.3s ease both; }
   .modal-logo { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 4px; }
   .modal-logo span { color: var(--teal); }
   .modal-tagline { text-align: center; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
-
   .modal-title { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
   .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
-
-  .modal input {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid var(--border);
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    background: var(--bg);
-    color: var(--ink);
-    margin-bottom: 10px;
-    outline: none;
-  }
-
+  .modal input { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; background: var(--bg); color: var(--ink); margin-bottom: 10px; outline: none; }
   .modal input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(29,158,117,0.1); }
-
-  .modal-btn-primary {
-    width: 100%;
-    padding: 13px;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: opacity 0.2s;
-  }
-
+  .modal-btn-primary { width: 100%; padding: 13px; background: var(--ink); color: var(--bg); border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; margin-bottom: 10px; transition: opacity 0.2s; }
   .modal-btn-primary:hover { opacity: 0.88; }
-
-  .modal-btn-teal {
-    width: 100%;
-    padding: 12px;
-    background: var(--white);
-    color: var(--teal);
-    border: 1.5px solid var(--teal);
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: all 0.2s;
-  }
-
-  .modal-btn-teal:hover { background: var(--teal-light); }
-
-  .modal-btn-ghost {
-    width: 100%;
-    padding: 12px;
-    background: var(--bg);
-    color: var(--muted);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
+  .modal-btn-ghost { width: 100%; padding: 12px; background: var(--bg); color: var(--muted); border: 1px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 13px; cursor: pointer; transition: all 0.2s; }
   .modal-btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
-
   .modal-divider { text-align: center; font-size: 12px; color: var(--muted); margin: 8px 0; position: relative; }
   .modal-divider::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 0; }
   .modal-divider span { background: var(--white); padding: 0 10px; position: relative; z-index: 1; }
-
   .modal-switch { text-align: center; font-size: 12px; color: var(--muted); margin-top: 14px; }
   .modal-switch a { color: var(--teal); cursor: pointer; text-decoration: underline; font-weight: 500; }
-
   .modal-guest-note { text-align: center; font-size: 11px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
   .modal-error { display: none; background: #fff5f5; border: 1px solid #fcc; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #c0392b; margin-bottom: 10px; }
 
-  /* ===== LIMIT MODAL ===== */
-  .limit-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(26,24,20,0.5);
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-
+  /* LIMIT MODAL */
+  .limit-overlay { display: none; position: fixed; inset: 0; background: rgba(26,24,20,0.5); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
   .limit-overlay.open { display: flex; }
-
-  .limit-modal {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 32px;
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
-    animation: fadeUp 0.3s ease both;
-  }
-
+  .limit-modal { background: var(--white); border-radius: 20px; padding: 32px; width: 100%; max-width: 380px; text-align: center; animation: fadeUp 0.3s ease both; }
   .limit-emoji { font-size: 32px; margin-bottom: 12px; }
   .limit-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
   .limit-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
-
-  .limit-btn-share {
-    width: 100%;
-    padding: 13px;
-    background: var(--teal);
-    color: var(--white);
-    border: none;
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: opacity 0.2s;
-  }
-
+  .limit-btn-share { width: 100%; padding: 13px; background: var(--teal); color: var(--white); border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; margin-bottom: 10px; transition: opacity 0.2s; }
   .limit-btn-share:hover { opacity: 0.88; }
-
-  .limit-btn-upgrade {
-    width: 100%;
-    padding: 13px;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: opacity 0.2s;
-  }
-
+  .limit-btn-upgrade { width: 100%; padding: 13px; background: var(--ink); color: var(--bg); border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; margin-bottom: 10px; transition: opacity 0.2s; }
   .limit-btn-upgrade:hover { opacity: 0.88; }
-
   .limit-later { font-size: 12px; color: var(--muted); cursor: pointer; text-decoration: underline; margin-top: 4px; display: inline-block; }
-
   .limit-perks { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; text-align: left; }
   .limit-perk { font-size: 12px; color: var(--ink); padding: 3px 0; display: flex; gap: 8px; }
   .limit-perk-check { color: var(--teal); font-weight: 600; }
 
-  /* USER CHIP in app nav */
-  .user-chip {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    color: var(--muted);
-  }
+  /* USER CHIP */
+  .user-chip { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+  .user-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--teal-light); border: 1px solid var(--teal); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--teal-dark); font-weight: 600; cursor: pointer; }
+  .pro-nav-badge { background: var(--purple-light); color: var(--purple-dark); font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
 
-  .user-avatar {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--teal-light);
-    border: 1px solid var(--teal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    color: var(--teal-dark);
-    font-weight: 600;
-    cursor: pointer;
-  }
+  /* SUCCESS PAGE */
+  .success-body { max-width: 480px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+  .success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--teal-light); border: 2px solid var(--teal); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px; }
+  .success-title { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+  .success-sub { font-size: 15px; color: var(--muted); margin-bottom: 32px; line-height: 1.7; }
+  .success-perks { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-bottom: 28px; text-align: left; }
+  .success-perk { font-size: 14px; color: var(--ink); padding: 6px 0; display: flex; gap: 10px; align-items: center; }
+  .success-check { color: var(--teal); font-weight: 600; }
+  .success-btn { display: inline-block; background: var(--ink); color: var(--bg); border: none; border-radius: 12px; padding: 15px 40px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+  .success-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
 
-  .signout-btn {
-    background: transparent;
-    border: none;
-    font-size: 12px;
-    color: var(--muted);
-    cursor: pointer;
-    padding: 0;
-    font-family: 'DM Sans', sans-serif;
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
-  .signout-btn:hover { color: var(--ink); }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* RESPONSIVE */
   @media (max-width: 600px) {
     nav { padding: 0 20px; }
     .stats { gap: 24px; flex-wrap: wrap; }
@@ -588,6 +237,7 @@
     .field-row { grid-template-columns: 1fr; }
     .form-card { padding: 20px; }
     .app-body { padding: 20px 16px 60px; }
+    .pricing-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -628,6 +278,50 @@
     </div>
   </section>
 
+  <!-- PRICING SECTION -->
+  <section style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="pricing-section">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Simple, honest pricing.</h2>
+      <p class="section-sub">Start free. Upgrade when you're ready. No pressure — just like NIMP.</p>
+      <div class="pricing-grid">
+        <div class="plan-card">
+          <div class="plan-head">
+            <div class="plan-name">Free</div>
+            <div class="plan-price">$0</div>
+            <div class="plan-price-sub">Forever free · no card needed</div>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feat"><span class="feat-check">✓</span> All 5 modes + 4 tones</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> 5 messages/day</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> Guest or account mode</div>
+            <div class="plan-feat-locked"><span class="feat-lock">✕</span> Save & download answers</div>
+            <div class="plan-feat-locked"><span class="feat-lock">✕</span> Body language tips</div>
+            <div class="plan-feat-locked"><span class="feat-lock">✕</span> AI Networking Agent</div>
+            <button class="plan-btn" onclick="showApp()">Get started free</button>
+          </div>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-head">
+            <div class="plan-name">Pro <span class="popular-tag">Most popular</span></div>
+            <div class="plan-price">$9<span>/mo</span></div>
+            <div class="plan-price-sub">or $7/mo billed annually · $84/yr</div>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feat"><span class="feat-check">✓</span> Everything in Free</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> Unlimited messages</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> Save & download answers</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> Body language & posture tips</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> AI Networking Agent</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> Early access to new features</div>
+            <button class="plan-btn-teal" onclick="handleLandingUpgrade()">Get Pro — $9/mo</button>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:20px; font-size:12px; color:var(--muted);">No contracts. Cancel anytime. Questions? <a href="mailto:latifah@getnimp.co" style="color:var(--teal);">latifah@getnimp.co</a></p>
+    </div>
+  </section>
+
   <section style="background: #f7f5f0; padding: 40px 24px; text-align: center; border-top: 1px solid #e0dbd2;">
     <div style="max-width: 480px; margin: 0 auto;">
       <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #1D9E75; margin-bottom: 10px; font-weight: 500;">Stay in the loop</div>
@@ -663,13 +357,12 @@
   </div>
 
   <div class="app-body">
-
-    <!-- Usage bar -->
     <div class="usage-bar" id="usage-bar">
       <span id="usage-label">Loading…</span>
       <div style="display:flex; align-items:center; gap:12px;">
         <div class="usage-dots" id="usage-dots"></div>
         <span class="usage-signin-link" id="usage-signin-link" onclick="openAuthModal()" style="display:none;">Sign up for free →</span>
+        <span class="pro-unlimited-badge" id="pro-unlimited-badge" style="display:none;">Unlimited</span>
       </div>
     </div>
 
@@ -684,7 +377,6 @@
     <div class="form-card">
       <div class="tip-box" id="mode-tip"></div>
 
-      <!-- Online DMs -->
       <div id="panel-online">
         <div class="field-row">
           <div><label>Their name *</label><input id="o-name" type="text" placeholder="e.g. Jordan Lee" /></div>
@@ -695,7 +387,6 @@
         <div class="field-group"><label>Your goal</label><textarea id="o-goal" rows="2" placeholder="e.g. I want to learn about their freelance journey…"></textarea></div>
       </div>
 
-      <!-- In-person -->
       <div id="panel-inperson" style="display:none;">
         <div class="field-group"><label>Type of event *</label><input id="ip-event" type="text" placeholder="e.g. Tech meetup, industry conference, alumni mixer" /></div>
         <div class="field-group"><label>Your role / background</label><input id="ip-role" type="text" placeholder="e.g. Networking coach, marketer, student" /></div>
@@ -710,7 +401,6 @@
         </div>
       </div>
 
-      <!-- Follow-up -->
       <div id="panel-followup" style="display:none;">
         <div class="field-row">
           <div><label>Their name *</label><input id="fu-name" type="text" placeholder="e.g. Marcus Williams" /></div>
@@ -720,7 +410,6 @@
         <div class="field-group"><label>Desired next step</label><input id="fu-next" type="text" placeholder="e.g. Stay in touch, schedule a call" /></div>
       </div>
 
-      <!-- Reconnect -->
       <div id="panel-reconnect" style="display:none;">
         <div class="field-row">
           <div><label>Their name *</label><input id="rc-name" type="text" placeholder="e.g. Priya Sharma" /></div>
@@ -730,19 +419,15 @@
         <div class="field-group"><label>Reason to reconnect</label><textarea id="rc-reason" rows="2" placeholder="e.g. I saw they got promoted, I'm exploring a career change…"></textarea></div>
       </div>
 
-      <!-- My Intro -->
       <div id="panel-intro" style="display:none;">
         <div class="field-group"><label>Name *</label><input id="in-name" type="text" placeholder="e.g. Alex Rivera" /></div>
         <div class="field-group"><label>What you do</label><input id="in-role" type="text" placeholder="e.g. Networking coach & founder of NIMP" /></div>
         <div class="field-group"><label>Who you help or what you're building</label><textarea id="in-work" rows="2" placeholder="e.g. I help introverts build real connections without the awkwardness…"></textarea></div>
         <div class="field-group"><label>Where will you use this intro?</label>
-          <select id="in-context">
-            <option>Networking event (in person)</option><option>LinkedIn bio</option><option>Cold email or DM</option><option>Job interview</option><option>Online community intro</option>
-          </select>
+          <select id="in-context"><option>Networking event (in person)</option><option>LinkedIn bio</option><option>Cold email or DM</option><option>Job interview</option><option>Online community intro</option></select>
         </div>
       </div>
 
-      <!-- Tone -->
       <div style="margin-top: 20px; margin-bottom: 20px;">
         <label>Tone</label>
         <div class="chip-group">
@@ -757,7 +442,6 @@
       <div class="error-box" id="err-box"></div>
     </div>
 
-    <!-- Output -->
     <div class="output-card" id="output-card">
       <div class="output-header">
         <span class="output-label">Your message</span>
@@ -771,7 +455,12 @@
       <div class="char-count" id="char-count"></div>
     </div>
 
-    <!-- History -->
+    <!-- Body Language Tips -->
+    <div class="body-tips-card" id="body-tips-card" style="display:none;">
+      <div class="body-tips-label">Body language tips</div>
+      <div id="body-tips-content"></div>
+    </div>
+
     <div class="history-card" id="history-card">
       <div class="history-header">
         <span style="font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">Saved messages</span>
@@ -779,7 +468,25 @@
       </div>
       <div id="history-list"></div>
     </div>
+  </div>
+</div>
 
+<!-- ===== SUCCESS PAGE ===== -->
+<div id="success-page">
+  <nav>
+    <div class="nav-logo">NIMP<span>.</span></div>
+  </nav>
+  <div class="success-body">
+    <div class="success-icon">✓</div>
+    <h1 class="success-title">Welcome to Pro!</h1>
+    <p class="success-sub">Your subscription is active. You now have full access to everything NIMP has to offer.</p>
+    <div class="success-perks">
+      <div class="success-perk"><span class="success-check">✓</span> Unlimited messages every day</div>
+      <div class="success-perk"><span class="success-check">✓</span> Body language & posture tips</div>
+      <div class="success-perk"><span class="success-check">✓</span> Save & download your answers</div>
+      <div class="success-perk"><span class="success-check">✓</span> AI Networking Agent (coming soon)</div>
+    </div>
+    <button class="success-btn" onclick="goToApp()">Start networking →</button>
   </div>
 </div>
 
@@ -788,8 +495,6 @@
   <div class="modal">
     <div class="modal-logo">NIMP<span>.</span></div>
     <div class="modal-tagline">Network in my pocket</div>
-
-    <!-- Sign Up View -->
     <div id="auth-signup">
       <div class="modal-title">Welcome to NIMP</div>
       <div class="modal-sub">Create a free account to track your daily messages and save your history.</div>
@@ -802,8 +507,6 @@
       <div class="modal-guest-note">Guest mode: 5 free messages/day. History won't be saved between visits.</div>
       <div class="modal-switch">Already have an account? <a onclick="showSignin()">Sign in</a></div>
     </div>
-
-    <!-- Sign In View -->
     <div id="auth-signin" style="display:none;">
       <div class="modal-title">Welcome back</div>
       <div class="modal-sub">Sign in to your NIMP account.</div>
@@ -832,7 +535,7 @@
       <div class="limit-perk"><span class="limit-perk-check">✓</span> AI Networking Agent</div>
     </div>
     <button class="limit-btn-share" onclick="shareNIMP()">Share NIMP & get 1 more message</button>
-    <button class="limit-btn-upgrade" onclick="closeLimitModal()">Upgrade to Pro — $9/mo <span style="font-size:11px;opacity:0.7;">(coming soon)</span></button>
+    <button class="limit-btn-upgrade" onclick="handleUpgrade()">Upgrade to Pro — $9/mo</button>
     <div><span class="limit-later" onclick="closeLimitModal()">Remind me tomorrow</span></div>
   </div>
 </div>
@@ -846,6 +549,14 @@ const TIPS = [
   "Your intro should answer three things: who you are, what you do, and why it matters to them."
 ];
 
+const BODY_TIPS = {
+  0: ["Make eye contact when you hit send — confidence carries through in digital tone too.", "Keep your posture open when writing; relaxed energy comes through in word choice.", "Take a breath before reaching out. Calm energy makes for more natural messages."],
+  1: ["Make eye contact and smile when you deliver this — it signals warmth and confidence.", "Keep shoulders back and arms uncrossed to project openness.", "Mirror their energy subtly — if they're animated, match that enthusiasm slightly."],
+  2: ["Send this when you're in a calm, positive headspace — your energy shows in the words.", "Sit up straight while writing follow-ups — your posture affects your confidence in the message.", "Read it aloud before sending. If it sounds like you, it is you."],
+  3: ["Approach reconnecting with an open, curious posture — no pressure in your body or your words.", "Smile while you write. It genuinely changes your tone.", "Keep it brief — short messages feel less intense for both of you."],
+  4: ["Practice your intro standing up with good posture before an event.", "Speak slowly and make eye contact — the pause after your name is power.", "Keep your hands visible and relaxed when delivering your intro in person."]
+};
+
 const PANELS = ['panel-online','panel-inperson','panel-followup','panel-reconnect','panel-intro'];
 const MODE_NAMES = ['Online DM','In-person','Follow-up','Reconnect','Intro'];
 const DAILY_LIMIT = 5;
@@ -854,10 +565,85 @@ let currentMode = 0;
 let selectedTone = 'Warm & calm';
 let savedMessages = [];
 let lastPrompt = '';
+let currentUser = null;
+let isPro = false;
 
-// ─── Auth State ───────────────────────────────────────────────────
-let currentUser = null; // { id, email } or null for guest
+// ─── Check for success redirect ──────────────────────────────────
+window.addEventListener('load', () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('session_id') && params.get('user_id')) {
+    const userId = params.get('user_id');
+    currentUser = JSON.parse(localStorage.getItem('nimp_user') || 'null');
+    showSuccessPage();
+    // Clean URL
+    window.history.replaceState({}, '', '/');
+  } else if (params.get('cancelled')) {
+    window.history.replaceState({}, '', '/');
+  }
+  // Restore user from localStorage
+  const stored = localStorage.getItem('nimp_user');
+  if (stored) {
+    currentUser = JSON.parse(stored);
+    checkProStatus();
+  }
+  updateTip();
+});
 
+function showSuccessPage() {
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('success-page').style.display = 'block';
+  isPro = true;
+}
+
+function goToApp() {
+  document.getElementById('success-page').style.display = 'none';
+  showApp();
+}
+
+// ─── Pro Status ───────────────────────────────────────────────────
+async function checkProStatus() {
+  if (!currentUser) { isPro = false; return; }
+  try {
+    const res = await fetch('/api/pro/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: currentUser.id })
+    });
+    const data = await res.json();
+    isPro = data.isPro || false;
+  } catch(e) { isPro = false; }
+}
+
+// ─── Stripe Upgrade ──────────────────────────────────────────────
+async function handleUpgrade() {
+  if (!currentUser) {
+    closeLimitModal();
+    openAuthModal();
+    return;
+  }
+  try {
+    const res = await fetch('/api/stripe/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: currentUser.id, email: currentUser.email })
+    });
+    const data = await res.json();
+    if (data.url) window.location.href = data.url;
+  } catch(e) {
+    alert('Something went wrong. Please try again.');
+  }
+}
+
+async function handleLandingUpgrade() {
+  if (!currentUser) {
+    openAuthModal();
+    return;
+  }
+  await handleUpgrade();
+}
+
+// ─── Guest helpers ────────────────────────────────────────────────
 function getGuestCount() {
   const data = JSON.parse(localStorage.getItem('nimp_guest') || '{}');
   const today = new Date().toISOString().split('T')[0];
@@ -870,21 +656,25 @@ function setGuestCount(n) {
   localStorage.setItem('nimp_guest', JSON.stringify({ date: today, count: n }));
 }
 
-function getBonusCount() {
-  return parseInt(localStorage.getItem('nimp_bonus') || '0');
-}
-
-function setBonusCount(n) {
-  localStorage.setItem('nimp_bonus', String(n));
-}
+function getBonusCount() { return parseInt(localStorage.getItem('nimp_bonus') || '0'); }
+function setBonusCount(n) { localStorage.setItem('nimp_bonus', String(n)); }
 
 // ─── Usage UI ────────────────────────────────────────────────────
 async function refreshUsageBar() {
-  const bar = document.getElementById('usage-bar');
   const label = document.getElementById('usage-label');
   const dotsEl = document.getElementById('usage-dots');
   const signinLink = document.getElementById('usage-signin-link');
+  const unlimitedBadge = document.getElementById('pro-unlimited-badge');
 
+  if (isPro) {
+    label.textContent = 'Messages today';
+    dotsEl.innerHTML = '';
+    signinLink.style.display = 'none';
+    unlimitedBadge.style.display = 'inline';
+    return;
+  }
+
+  unlimitedBadge.style.display = 'none';
   let count = 0;
   let limit = DAILY_LIMIT + getBonusCount();
 
@@ -906,7 +696,6 @@ async function refreshUsageBar() {
   }
 
   label.textContent = `${count} of ${limit} messages used today`;
-
   dotsEl.innerHTML = '';
   for (let i = 0; i < limit; i++) {
     const d = document.createElement('div');
@@ -940,24 +729,17 @@ async function handleSignup() {
   const password = document.getElementById('signup-password').value;
   const errEl = document.getElementById('signup-error');
   errEl.style.display = 'none';
-
   if (!email || !password) { errEl.textContent = 'Please enter your email and a password.'; errEl.style.display = 'block'; return; }
   if (password.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = 'block'; return; }
-
   try {
-    const res = await fetch('/api/auth/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
+    const res = await fetch('/api/auth/signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password }) });
     const data = await res.json();
     if (data.error) { errEl.textContent = data.error; errEl.style.display = 'block'; return; }
     currentUser = { id: data.user.id, email: data.user.email };
+    localStorage.setItem('nimp_user', JSON.stringify(currentUser));
+    await checkProStatus();
     onAuthSuccess();
-  } catch(e) {
-    errEl.textContent = 'Something went wrong. Please try again.';
-    errEl.style.display = 'block';
-  }
+  } catch(e) { errEl.textContent = 'Something went wrong. Please try again.'; errEl.style.display = 'block'; }
 }
 
 async function handleSignin() {
@@ -965,23 +747,16 @@ async function handleSignin() {
   const password = document.getElementById('signin-password').value;
   const errEl = document.getElementById('signin-error');
   errEl.style.display = 'none';
-
   if (!email || !password) { errEl.textContent = 'Please enter your email and password.'; errEl.style.display = 'block'; return; }
-
   try {
-    const res = await fetch('/api/auth/signin', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
+    const res = await fetch('/api/auth/signin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password }) });
     const data = await res.json();
     if (data.error) { errEl.textContent = data.error; errEl.style.display = 'block'; return; }
     currentUser = { id: data.user.id, email: data.user.email };
+    localStorage.setItem('nimp_user', JSON.stringify(currentUser));
+    await checkProStatus();
     onAuthSuccess();
-  } catch(e) {
-    errEl.textContent = 'Something went wrong. Please try again.';
-    errEl.style.display = 'block';
-  }
+  } catch(e) { errEl.textContent = 'Something went wrong. Please try again.'; errEl.style.display = 'block'; }
 }
 
 function onAuthSuccess() {
@@ -1005,6 +780,7 @@ function updateUserChip() {
       <div style="display:flex;align-items:center;gap:8px;">
         <div class="user-avatar" title="${currentUser.email}">${initial}</div>
         <span style="font-size:12px;color:#6b6760;">${currentUser.email}</span>
+        ${isPro ? '<span class="pro-nav-badge">Pro</span>' : '<button onclick="handleUpgrade()" style="background:#1D9E75;color:#fff;border:none;border-radius:8px;padding:5px 12px;font-size:11px;font-weight:500;cursor:pointer;font-family:\'DM Sans\',sans-serif;">Upgrade to Pro</button>'}
         <button onclick="signOut()" style="background:transparent;border:none;font-size:12px;color:#6b6760;cursor:pointer;text-decoration:underline;font-family:'DM Sans',sans-serif;">Sign out</button>
       </div>
     `;
@@ -1018,30 +794,24 @@ function updateUserChip() {
 
 function signOut() {
   currentUser = null;
+  isPro = false;
+  localStorage.removeItem('nimp_user');
   updateUserChip();
   refreshUsageBar();
 }
 
 // ─── Limit Modal ──────────────────────────────────────────────────
-function openLimitModal() {
-  document.getElementById('limit-overlay').classList.add('open');
-}
-
-function closeLimitModal() {
-  document.getElementById('limit-overlay').classList.remove('open');
-}
+function openLimitModal() { document.getElementById('limit-overlay').classList.add('open'); }
+function closeLimitModal() { document.getElementById('limit-overlay').classList.remove('open'); }
 
 function shareNIMP() {
   const url = 'https://www.getnimp.co';
-  const text = 'I\'ve been using NIMP to help me network without the awkwardness 👀 It\'s free — check it out:';
+  const text = 'I\'ve been using NIMP to help me network without the awkwardness — it\'s free, check it out:';
   if (navigator.share) {
     navigator.share({ title: 'NIMP — Network In My Pocket', text, url });
   } else {
-    navigator.clipboard.writeText(text + ' ' + url).then(() => {
-      alert('Link copied! Share it and your bonus message will be added.');
-    });
+    navigator.clipboard.writeText(text + ' ' + url).then(() => alert('Link copied! Share it and your bonus message will be added.'));
   }
-  // Grant bonus generation
   setBonusCount(getBonusCount() + 1);
   closeLimitModal();
   refreshUsageBar();
@@ -1049,15 +819,11 @@ function shareNIMP() {
 
 // ─── Usage Check ─────────────────────────────────────────────────
 async function checkCanGenerate() {
+  if (isPro) return true;
   const bonus = getBonusCount();
   const effectiveLimit = DAILY_LIMIT + bonus;
-
   if (currentUser) {
-    const res = await fetch('/api/usage/check', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: currentUser.id })
-    });
+    const res = await fetch('/api/usage/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId: currentUser.id }) });
     const data = await res.json();
     return (data.count || 0) < effectiveLimit;
   } else {
@@ -1065,10 +831,31 @@ async function checkCanGenerate() {
   }
 }
 
+// ─── Body Language Tips ──────────────────────────────────────────
+function showBodyTips(mode) {
+  const card = document.getElementById('body-tips-card');
+  const content = document.getElementById('body-tips-content');
+  const tips = BODY_TIPS[mode] || BODY_TIPS[0];
+
+  if (isPro) {
+    content.innerHTML = tips.map(t => `<div class="body-tip"><span class="tip-icon">→</span>${t}</div>`).join('');
+  } else {
+    content.innerHTML = `
+      <div class="body-tip"><span class="tip-icon">→</span>${tips[0]}</div>
+      <div class="body-tips-locked">
+        <div class="body-tips-blur">${tips[1]}<br>${tips[2]}</div>
+        <button onclick="handleUpgrade()" style="background:#1a1814;color:#f7f5f0;border:none;border-radius:8px;padding:9px 18px;font-size:12px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;">Unlock all tips with Pro →</button>
+      </div>
+    `;
+  }
+  card.style.display = 'block';
+}
+
 // ─── App Navigation ──────────────────────────────────────────────
 function showApp(mode) {
   document.getElementById('landing').style.display = 'none';
   document.getElementById('app').style.display = 'block';
+  document.getElementById('success-page').style.display = 'none';
   window.scrollTo(0,0);
   if (mode !== undefined) {
     const pills = document.querySelectorAll('.pill');
@@ -1077,8 +864,6 @@ function showApp(mode) {
   updateTip();
   updateUserChip();
   refreshUsageBar();
-
-  // Show auth modal on first visit if not guest/signed in
   const hasVisited = localStorage.getItem('nimp_visited');
   if (!hasVisited && !currentUser) {
     localStorage.setItem('nimp_visited', '1');
@@ -1089,12 +874,11 @@ function showApp(mode) {
 function showLanding() {
   document.getElementById('landing').style.display = 'block';
   document.getElementById('app').style.display = 'none';
+  document.getElementById('success-page').style.display = 'none';
   window.scrollTo(0,0);
 }
 
-function updateTip() {
-  document.getElementById('mode-tip').textContent = '💡 ' + TIPS[currentMode];
-}
+function updateTip() { document.getElementById('mode-tip').textContent = '💡 ' + TIPS[currentMode]; }
 
 function switchMode(i, el) {
   PANELS.forEach((p,j) => document.getElementById(p).style.display = j===i ? 'block' : 'none');
@@ -1104,6 +888,7 @@ function switchMode(i, el) {
   updateTip();
   document.getElementById('err-box').style.display = 'none';
   document.getElementById('output-card').style.display = 'none';
+  document.getElementById('body-tips-card').style.display = 'none';
 }
 
 function selectTone(el) {
@@ -1112,9 +897,7 @@ function selectTone(el) {
   selectedTone = el.textContent.trim();
 }
 
-function getSubChips() {
-  return Array.from(document.querySelectorAll('.chip.sub.selected')).map(b => b.textContent).join(', ');
-}
+function getSubChips() { return Array.from(document.querySelectorAll('.chip.sub.selected')).map(b => b.textContent).join(', '); }
 
 function buildPrompt() {
   if (currentMode === 0) {
@@ -1164,25 +947,13 @@ async function generate() {
   const prompt = buildPrompt();
   const errBox = document.getElementById('err-box');
   errBox.style.display = 'none';
-
-  if (!prompt) {
-    errBox.textContent = 'Please fill in the required fields marked with *.';
-    errBox.style.display = 'block';
-    return;
-  }
-
-  // Check usage limit
+  if (!prompt) { errBox.textContent = 'Please fill in the required fields marked with *.'; errBox.style.display = 'block'; return; }
   const canGenerate = await checkCanGenerate();
-  if (!canGenerate) {
-    openLimitModal();
-    return;
-  }
-
+  if (!canGenerate) { openLimitModal(); return; }
   lastPrompt = prompt;
   const btn = document.getElementById('gen-btn');
   btn.textContent = 'Working on it…';
   btn.disabled = true;
-
   await sendToAI(prompt);
 }
 
@@ -1194,31 +965,17 @@ function regenerate() {
 async function sendToAI(prompt) {
   const errBox = document.getElementById('err-box');
   const btn = document.getElementById('gen-btn');
-
   try {
     const body = { messages: [{ role: 'user', content: prompt }] };
     if (currentUser) body.userId = currentUser.id;
-
-    const res = await fetch('/api/generate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-
+    const res = await fetch('/api/generate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
     const data = await res.json();
-
-    if (res.status === 429 || data.error === 'daily_limit_reached') {
-      openLimitModal();
-      return;
-    }
-
+    if (res.status === 429 || data.error === 'daily_limit_reached') { openLimitModal(); return; }
     const msg = data?.content?.[0]?.text?.trim();
     if (!msg) throw new Error(JSON.stringify(data));
-
-    // Increment guest count
     if (!currentUser) setGuestCount(getGuestCount() + 1);
-
     showOutput(msg);
+    showBodyTips(currentMode);
     refreshUsageBar();
   } catch(e) {
     errBox.textContent = 'Something went wrong: ' + e.message;
@@ -1290,7 +1047,6 @@ function copyHist(i) {
 
 function clearHistory() { savedMessages = []; renderHistory(); }
 
-// Close modals on overlay click
 document.getElementById('auth-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeAuthModal();
 });
