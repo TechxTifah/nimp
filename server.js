@@ -269,5 +269,39 @@ app.post('/api/generate', async (req, res) => {
   }
 });
 
+// ─── Delete Account ────────────────────────────────────────────────
+app.post('/api/auth/delete', async (req, res) => {
+  const { userId } = req.body;
+  if (!userId) return res.status(400).json({ error: 'Missing userId' });
+
+  try {
+    // Delete usage records
+    await supabase(`/rest/v1/usage?user_id=eq.${userId}`, {
+      method: 'DELETE',
+      headers: { Prefer: 'return=minimal' }
+    });
+
+    // Delete subscriber records
+    await supabase(`/rest/v1/subscribers?user_id=eq.${userId}`, {
+      method: 'DELETE',
+      headers: { Prefer: 'return=minimal' }
+    });
+
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Handle success and cancel redirects
+app.get('/success', (req, res) => {
+  const { session_id, user_id } = req.query;
+  res.redirect(`/?session_id=${session_id}&user_id=${user_id}`);
+});
+
+app.get('/cancel', (req, res) => {
+  res.redirect('/?cancelled=true');
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`NIMP running on port ${PORT}`));
