@@ -468,6 +468,11 @@
       </div>
       <div id="history-list"></div>
     </div>
+
+    <div id="delete-account-section" style="display:none; text-align:center; padding: 24px 0 8px;">
+      <button onclick="handleDeleteAccount()" style="background:transparent;border:none;font-size:11px;color:#c8c2ba;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline;">Delete my account</button>
+    </div>
+
   </div>
 </div>
 
@@ -773,6 +778,7 @@ function continueAsGuest() {
 
 function updateUserChip() {
   const chip = document.getElementById('user-chip');
+  const deleteSection = document.getElementById('delete-account-section');
   if (currentUser) {
     const initial = currentUser.email.charAt(0).toUpperCase();
     chip.innerHTML = `
@@ -784,11 +790,13 @@ function updateUserChip() {
         <button onclick="signOut()" style="background:transparent;border:none;font-size:12px;color:#6b6760;cursor:pointer;text-decoration:underline;font-family:'DM Sans',sans-serif;">Sign out</button>
       </div>
     `;
+    if (deleteSection) deleteSection.style.display = 'block';
   } else {
     chip.innerHTML = `
       <button class="back-btn" onclick="showLanding()">← Back</button>
       <button onclick="openAuthModal()" style="background:#1a1814;color:#f7f5f0;border:none;border-radius:10px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;">Sign in / Sign up</button>
     `;
+    if (deleteSection) deleteSection.style.display = 'none';
   }
 }
 
@@ -796,8 +804,26 @@ function signOut() {
   currentUser = null;
   isPro = false;
   localStorage.removeItem('nimp_user');
+  document.getElementById('delete-account-section').style.display = 'none';
   updateUserChip();
   refreshUsageBar();
+}
+
+async function handleDeleteAccount() {
+  if (!currentUser) return;
+  const confirmed = confirm('Are you sure you want to delete your account? This cannot be undone.');
+  if (!confirmed) return;
+  try {
+    await fetch('/api/auth/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: currentUser.id })
+    });
+    alert('Your account data has been deleted. You have been signed out.');
+    signOut();
+  } catch(e) {
+    alert('Something went wrong. Please email latifah@getnimp.co to request deletion.');
+  }
 }
 
 // ─── Limit Modal ──────────────────────────────────────────────────
