@@ -269,19 +269,82 @@ app.post('/api/generate', async (req, res) => {
   }
 });
 
+// ─── Agent (Pro Only) ──────────────────────────────────────────────
+app.post('/api/agent', async (req, res) => {
+  const { messages, userId } = req.body;
+
+  try {
+    // Check Pro status — agent is Pro only
+    if (userId) {
+      const subRows = await supabase(
+        `/rest/v1/subscribers?user_id=eq.${userId}&select=*`,
+        { method: 'GET' }
+      );
+      const sub = Array.isArray(subRows) ? subRows[0] : null;
+      const isPro = sub && sub.status === 'active';
+
+      if (!isPro) {
+        return res.status(403).json({
+          error: 'pro_required',
+          message: 'The NIMP Agent is a Pro feature. Upgrade to access your personal networking coach.'
+        });
+      }
+    } else {
+      return res.status(403).json({
+        error: 'pro_required',
+        message: 'Please sign in and upgrade to Pro to access the NIMP Agent.'
+      });
+    }
+
+    // System prompt for Nim — NIMP's AI agent
+    const systemPrompt = `You are Nim — NIMP's warm, calm, supportive AI networking coach built specifically for introverts. Your personality is like a knowledgeable best friend who happens to be a networking expert.
+
+Your job is to:
+1. Have a natural conversation to understand what the user needs
+2. Ask clarifying questions one at a time — never overwhelm them
+3. Give real, specific networking coaching and advice
+4. When you have enough info, generate a ready-to-use message for them
+5. Always be encouraging, warm, and never judgmental
+
+You cover: LinkedIn DMs, Instagram/Twitter outreach, in-person event prep, follow-ups, reconnecting with old contacts, and personal intros.
+
+When generating a final message, clearly label it as "Your message:" and present it ready to copy.
+
+Keep responses concise and conversational. You are Nim — not Claude, not an AI assistant. You are NIMP's networking coach.`;
+
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'anthropic-version': '2023-06-01',
+        'x-api-key': process.env.ANTHROPIC_API_KEY
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages
+      })
+    });
+
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ─── Delete Account ────────────────────────────────────────────────
 app.post('/api/auth/delete', async (req, res) => {
   const { userId } = req.body;
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 
   try {
-    // Delete usage records
     await supabase(`/rest/v1/usage?user_id=eq.${userId}`, {
       method: 'DELETE',
       headers: { Prefer: 'return=minimal' }
     });
 
-    // Delete subscriber records
     await supabase(`/rest/v1/subscribers?user_id=eq.${userId}`, {
       method: 'DELETE',
       headers: { Prefer: 'return=minimal' }
