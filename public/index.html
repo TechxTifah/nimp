@@ -16,39 +16,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --bg: #f7f5f0;
-    --white: #ffffff;
-    --ink: #1a1814;
-    --muted: #6b6760;
-    --border: #e0dbd2;
-    --teal: #1D9E75;
-    --teal-light: #E1F5EE;
-    --teal-dark: #085041;
-    --purple: #7F77DD;
-    --purple-light: #EEEDFE;
-    --purple-dark: #3C3489;
-    --amber: #c9a84c;
-    --amber-light: #FAEEDA;
+    --bg: #f7f5f0; --white: #ffffff; --ink: #1a1814; --muted: #6b6760; --border: #e0dbd2;
+    --teal: #1D9E75; --teal-light: #E1F5EE; --teal-dark: #085041;
+    --purple: #7F77DD; --purple-light: #EEEDFE; --purple-dark: #3C3489;
+    --amber: #c9a84c; --amber-light: #FAEEDA;
   }
-
   body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; font-size: 16px; line-height: 1.6; }
   a { color: inherit; text-decoration: none; }
-
-  /* NAV */
   nav { position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 40px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
   .nav-logo span { color: var(--teal); }
   .nav-cta { background: var(--ink); color: var(--bg); border: none; border-radius: 100px; padding: 8px 20px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; }
   .nav-cta:hover { opacity: 0.85; }
-
-  /* PAGES */
-  #landing { display: block; }
-  #app { display: none; }
-  #success-page { display: none; }
-
-  /* HERO */
+  #landing { display: block; } #app { display: none; } #success-page { display: none; }
   .hero { max-width: 760px; margin: 0 auto; padding: 80px 24px 64px; text-align: center; animation: fadeUp 0.7s ease both; }
   .hero-eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); background: var(--teal-light); padding: 5px 14px; border-radius: 100px; margin-bottom: 24px; }
   .hero h1 { font-family: 'Lora', serif; font-size: clamp(36px, 6vw, 60px); font-weight: 600; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; color: var(--ink); }
@@ -57,14 +38,10 @@
   .hero-btn { display: inline-block; background: var(--ink); color: var(--bg); border: none; border-radius: 12px; padding: 16px 40px; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer; transition: all 0.2s; margin-bottom: 12px; }
   .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
   .hero-sub { font-size: 13px; color: var(--muted); }
-
-  /* STATS */
   .stats { display: flex; justify-content: center; gap: 48px; padding: 40px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--white); animation: fadeUp 0.7s 0.1s ease both; }
   .stat-item { text-align: center; }
   .stat-num { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--ink); display: block; }
   .stat-label { font-size: 13px; color: var(--muted); }
-
-  /* MODES SECTION */
   .modes-section { max-width: 760px; margin: 0 auto; padding: 64px 24px; animation: fadeUp 0.7s 0.15s ease both; }
   .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 12px; }
   .section-title { font-family: 'Lora', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 600; text-align: center; margin-bottom: 8px; letter-spacing: -0.5px; }
@@ -76,8 +53,6 @@
   .mode-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
   .mode-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; color: var(--ink); }
   .mode-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
-
-  /* PRICING SECTION */
   .pricing-section { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
   .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
   .plan-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
@@ -97,38 +72,29 @@
   .plan-btn:hover { opacity: 0.88; }
   .plan-btn-teal { width: 100%; padding: 13px; background: var(--teal); color: var(--white); border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 16px; transition: opacity 0.2s; }
   .plan-btn-teal:hover { opacity: 0.88; }
-
-  /* QUOTE */
   .quote-section { background: var(--ink); color: var(--bg); padding: 64px 24px; text-align: center; }
   .quote-text { font-family: 'Lora', serif; font-size: clamp(18px, 3vw, 26px); font-style: italic; font-weight: 400; max-width: 600px; margin: 0 auto 20px; line-height: 1.5; opacity: 0.95; }
   .quote-author { font-size: 13px; opacity: 0.6; letter-spacing: 1px; text-transform: uppercase; }
-
-  /* FOOTER */
   footer { text-align: center; padding: 32px 24px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
   footer strong { color: var(--ink); font-weight: 500; }
-
-  /* APP */
   .app-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--border); background: var(--white); }
   .app-logo { font-family: 'Lora', serif; font-size: 18px; font-weight: 600; }
   .app-logo span { color: var(--teal); }
   .back-btn { background: transparent; border: 1px solid var(--border); border-radius: 100px; padding: 6px 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--muted); cursor: pointer; transition: all 0.2s; }
   .back-btn:hover { border-color: var(--ink); color: var(--ink); }
   .app-body { max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; }
-
-  /* USAGE BAR */
   .usage-bar { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; margin-bottom: 20px; font-size: 12px; color: var(--muted); }
   .usage-dots { display: flex; gap: 5px; }
   .usage-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
   .usage-dot.used { background: var(--teal); }
   .usage-signin-link { color: var(--teal); font-size: 12px; cursor: pointer; font-weight: 500; text-decoration: underline; }
   .pro-unlimited-badge { background: var(--teal-light); color: var(--teal-dark); font-size: 11px; padding: 2px 10px; border-radius: 20px; font-weight: 500; }
-
-  /* PILLS */
   .pills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
   .pill { padding: 8px 16px; border: 1px solid var(--border); border-radius: 100px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: var(--white); color: var(--muted); font-family: 'DM Sans', sans-serif; }
   .pill.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-
-  /* FORM */
+  .pill.nim-pill { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+  .pill.nim-pill.active { background: var(--teal); color: var(--white); border-color: var(--teal); }
+  .pill.nim-locked { border-color: var(--border); color: var(--muted); background: var(--white); cursor: pointer; }
   .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 16px; }
   .tip-box { background: var(--teal-light); border-radius: 10px; padding: 12px 16px; font-size: 13px; color: var(--teal-dark); margin-bottom: 24px; line-height: 1.55; }
   .field-group { margin-bottom: 16px; }
@@ -144,8 +110,6 @@
   .gen-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
   .gen-btn:disabled { opacity: 0.6; cursor: not-allowed; }
   .error-box { display: none; margin-top: 12px; padding: 12px 16px; background: #fff5f5; border: 1px solid #fcc; border-radius: 10px; font-size: 13px; color: #c0392b; }
-
-  /* OUTPUT */
   .output-card { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 28px; margin-bottom: 16px; animation: fadeUp 0.4s ease both; }
   .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
   .output-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
@@ -156,8 +120,6 @@
   .output-text { background: var(--bg); border: 1.5px solid var(--border); border-radius: 12px; padding: 18px 20px; font-size: 15px; line-height: 1.75; white-space: pre-wrap; color: var(--ink); margin-bottom: 10px; }
   .char-count { font-size: 11px; color: var(--muted); text-align: right; }
   .char-count.over { color: #c0392b; }
-
-  /* BODY LANGUAGE TIPS */
   .body-tips-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-bottom: 16px; }
   .body-tips-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
   .body-tip { font-size: 13px; color: var(--ink); padding: 8px 0; border-bottom: 1px solid var(--border); line-height: 1.6; display: flex; gap: 10px; }
@@ -165,14 +127,43 @@
   .tip-icon { color: var(--teal); flex-shrink: 0; }
   .body-tips-locked { background: var(--bg); border-radius: 10px; padding: 16px; text-align: center; margin-top: 8px; }
   .body-tips-blur { filter: blur(4px); user-select: none; pointer-events: none; font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
-
-  /* HISTORY */
   .history-card { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 24px; }
   .history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
   .hist-item { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; font-size: 13px; line-height: 1.65; color: var(--ink); }
   .hist-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
 
-  /* AUTH MODAL */
+  /* NIM AGENT STYLES */
+  .nim-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; margin-bottom: 16px; display: none; }
+  .nim-header { background: var(--ink); padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+  .nim-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .nim-name { font-size: 14px; font-weight: 500; color: #f7f5f0; }
+  .nim-sub { font-size: 11px; color: rgba(247,245,240,0.5); }
+  .nim-online { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); margin-left: auto; }
+  .nim-messages { padding: 20px; display: flex; flex-direction: column; gap: 14px; min-height: 320px; max-height: 400px; overflow-y: auto; background: var(--bg); }
+  .nim-msg-agent { display: flex; gap: 10px; align-items: flex-start; }
+  .nim-msg-agent-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; margin-top: 2px; }
+  .nim-bubble-agent { background: var(--white); border: 0.5px solid var(--border); border-radius: 18px 18px 18px 4px; padding: 12px 16px; font-size: 14px; line-height: 1.65; color: var(--ink); max-width: 85%; }
+  .nim-bubble-user { background: var(--ink); border-radius: 18px 18px 4px 18px; padding: 12px 16px; font-size: 14px; line-height: 1.65; color: #f7f5f0; max-width: 85%; align-self: flex-end; }
+  .nim-typing { display: flex; gap: 4px; padding: 12px 16px; background: var(--white); border: 0.5px solid var(--border); border-radius: 18px 18px 18px 4px; width: fit-content; }
+  .nim-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: nimBounce 1.2s infinite; }
+  .nim-dot:nth-child(2) { animation-delay: 0.2s; }
+  .nim-dot:nth-child(3) { animation-delay: 0.4s; }
+  .nim-input-area { padding: 14px 16px; border-top: 0.5px solid var(--border); background: var(--white); display: flex; gap: 8px; align-items: flex-end; }
+  .nim-input { flex: 1; border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 14px; font-size: 14px; font-family: 'DM Sans', sans-serif; resize: none; outline: none; background: var(--bg); color: var(--ink); max-height: 100px; }
+  .nim-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(29,158,117,0.1); }
+  .nim-send { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: white; transition: opacity 0.2s; }
+  .nim-send:hover { opacity: 0.88; }
+  .nim-send:disabled { opacity: 0.5; cursor: not-allowed; }
+  .nim-quick-prompts { padding: 0 16px 14px; background: var(--white); display: flex; flex-wrap: wrap; gap: 6px; }
+  .nim-quick { padding: 6px 12px; border: 1px solid var(--border); border-radius: 100px; font-size: 12px; background: var(--bg); color: var(--ink); cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.15s; }
+  .nim-quick:hover { border-color: var(--teal); color: var(--teal); }
+  .nim-upgrade-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 32px; text-align: center; margin-bottom: 16px; }
+  .nim-upgrade-emoji { font-size: 32px; margin-bottom: 12px; }
+  .nim-upgrade-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .nim-upgrade-sub { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+  .nim-upgrade-perks { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; text-align: left; }
+  .nim-upgrade-perk { font-size: 13px; color: var(--ink); padding: 3px 0; display: flex; gap: 8px; }
+
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(26,24,20,0.5); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--white); border-radius: 20px; padding: 32px; width: 100%; max-width: 400px; animation: fadeUp 0.3s ease both; }
@@ -194,8 +185,6 @@
   .modal-switch a { color: var(--teal); cursor: pointer; text-decoration: underline; font-weight: 500; }
   .modal-guest-note { text-align: center; font-size: 11px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
   .modal-error { display: none; background: #fff5f5; border: 1px solid #fcc; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #c0392b; margin-bottom: 10px; }
-
-  /* LIMIT MODAL */
   .limit-overlay { display: none; position: fixed; inset: 0; background: rgba(26,24,20,0.5); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
   .limit-overlay.open { display: flex; }
   .limit-modal { background: var(--white); border-radius: 20px; padding: 32px; width: 100%; max-width: 380px; text-align: center; animation: fadeUp 0.3s ease both; }
@@ -210,13 +199,9 @@
   .limit-perks { background: var(--bg); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; text-align: left; }
   .limit-perk { font-size: 12px; color: var(--ink); padding: 3px 0; display: flex; gap: 8px; }
   .limit-perk-check { color: var(--teal); font-weight: 600; }
-
-  /* USER CHIP */
   .user-chip { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
   .user-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--teal-light); border: 1px solid var(--teal); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--teal-dark); font-weight: 600; cursor: pointer; }
   .pro-nav-badge { background: var(--purple-light); color: var(--purple-dark); font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
-
-  /* SUCCESS PAGE */
   .success-body { max-width: 480px; margin: 0 auto; padding: 64px 24px; text-align: center; }
   .success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--teal-light); border: 2px solid var(--teal); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px; }
   .success-title { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
@@ -226,9 +211,8 @@
   .success-check { color: var(--teal); font-weight: 600; }
   .success-btn { display: inline-block; background: var(--ink); color: var(--bg); border: none; border-radius: 12px; padding: 15px 40px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
   .success-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-
+  @keyframes nimBounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
   @media (max-width: 600px) {
     nav { padding: 0 20px; }
     .stats { gap: 24px; flex-wrap: wrap; }
@@ -249,7 +233,6 @@
     <div class="nav-logo">NIMP<span>.</span><div style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #6b6760; font-weight: 400;">Network In My Pocket</div></div>
     <button class="nav-cta" onclick="showApp()">Try it free</button>
   </nav>
-
   <section class="hero">
     <div class="hero-eyebrow">Network In My Pocket — For introverts, by design</div>
     <h1>Networking that feels<br><em>like you.</em></h1>
@@ -257,14 +240,12 @@
     <button class="hero-btn" onclick="showApp()">Get the words you need →</button>
     <div class="hero-sub">Free to try. No pressure. Sign up optional.</div>
   </section>
-
   <div class="stats">
     <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Networking situations</span></div>
     <div class="stat-item"><span class="stat-num">Online + IRL</span><span class="stat-label">Works everywhere</span></div>
     <div class="stat-item"><span class="stat-num">&lt;30s</span><span class="stat-label">To a ready message</span></div>
     <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Built for introverts</span></div>
   </div>
-
   <section class="modes-section">
     <div class="section-label">What NIMP does</div>
     <h2 class="section-title">Every networking situation, covered.</h2>
@@ -277,8 +258,6 @@
       <div class="mode-card full" onclick="showApp(4)"><div class="mode-icon" style="background: #EAF3DE;">✨</div><div><h3>Your personal intro</h3><p>Craft how you introduce yourself in any situation — events, LinkedIn, emails, interviews. Finally have an answer to "so what do you do?"</p></div></div>
     </div>
   </section>
-
-  <!-- PRICING SECTION -->
   <section style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="pricing-section">
       <div class="section-label">Pricing</div>
@@ -297,7 +276,7 @@
             <div class="plan-feat"><span class="feat-check">✓</span> Guest or account mode</div>
             <div class="plan-feat-locked"><span class="feat-lock">✕</span> Save & download answers</div>
             <div class="plan-feat-locked"><span class="feat-lock">✕</span> Body language tips</div>
-            <div class="plan-feat-locked"><span class="feat-lock">✕</span> AI Networking Agent</div>
+            <div class="plan-feat-locked"><span class="feat-lock">✕</span> AI Networking Agent — Nim</div>
             <button class="plan-btn" onclick="showApp()">Get started free</button>
           </div>
         </div>
@@ -312,7 +291,7 @@
             <div class="plan-feat"><span class="feat-check">✓</span> Unlimited messages</div>
             <div class="plan-feat"><span class="feat-check">✓</span> Save & download answers</div>
             <div class="plan-feat"><span class="feat-check">✓</span> Body language & posture tips</div>
-            <div class="plan-feat"><span class="feat-check">✓</span> AI Networking Agent</div>
+            <div class="plan-feat"><span class="feat-check">✓</span> AI Networking Agent — Nim 🤫</div>
             <div class="plan-feat"><span class="feat-check">✓</span> Early access to new features</div>
             <button class="plan-btn-teal" onclick="handleLandingUpgrade()">Get Pro — $9/mo</button>
           </div>
@@ -321,7 +300,6 @@
       <p style="text-align:center; margin-top:20px; font-size:12px; color:var(--muted);">No contracts. Cancel anytime. Questions? <a href="mailto:latifah@getnimp.co" style="color:var(--teal);">latifah@getnimp.co</a></p>
     </div>
   </section>
-
   <section style="background: #f7f5f0; padding: 40px 24px; text-align: center; border-top: 1px solid #e0dbd2;">
     <div style="max-width: 480px; margin: 0 auto;">
       <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #1D9E75; margin-bottom: 10px; font-weight: 500;">Stay in the loop</div>
@@ -335,12 +313,10 @@
       <div style="font-size: 11px; color: #6b6760;">Join the quiet ones building real connections. 🤫</div>
     </div>
   </section>
-
   <section class="quote-section">
     <p class="quote-text">"Networking isn't about being the loudest in the room. It's about being the most intentional. NIMP gives introverts the superpower they already have — just the words to go with it."</p>
     <div class="quote-author">— Latifah · Networking Expert · getnimp.co</div>
   </section>
-
   <footer>
     <p style="margin-bottom:6px;"><strong>Network In My Pocket</strong> · getnimp.co</p>
     <p>Built for the quiet ones who have the most to say.</p>
@@ -355,7 +331,6 @@
       <button class="back-btn" onclick="showLanding()">← Back to home</button>
     </div>
   </div>
-
   <div class="app-body">
     <div class="usage-bar" id="usage-bar">
       <span id="usage-label">Loading…</span>
@@ -372,115 +347,150 @@
       <button class="pill" onclick="switchMode(2,this)">Follow-up</button>
       <button class="pill" onclick="switchMode(3,this)">Reconnect</button>
       <button class="pill" onclick="switchMode(4,this)">My intro</button>
+      <button class="pill nim-pill" id="nim-pill" onclick="switchToNim()">🤫 Nim — AI Agent</button>
     </div>
 
-    <div class="form-card">
-      <div class="tip-box" id="mode-tip"></div>
-
-      <div id="panel-online">
-        <div class="field-row">
-          <div><label>Their name *</label><input id="o-name" type="text" placeholder="e.g. Jordan Lee" /></div>
-          <div><label>Platform</label><select id="o-platform"><option>LinkedIn</option><option>Instagram</option><option>Twitter / X</option><option>Discord</option><option>Other</option></select></div>
+    <!-- STANDARD FORM MODES -->
+    <div id="standard-modes">
+      <div class="form-card">
+        <div class="tip-box" id="mode-tip"></div>
+        <div id="panel-online">
+          <div class="field-row">
+            <div><label>Their name *</label><input id="o-name" type="text" placeholder="e.g. Jordan Lee" /></div>
+            <div><label>Platform</label><select id="o-platform"><option>LinkedIn</option><option>Instagram</option><option>Twitter / X</option><option>Discord</option><option>Other</option></select></div>
+          </div>
+          <div class="field-group"><label>Their role or what they do</label><input id="o-role" type="text" placeholder="e.g. UX designer at a startup" /></div>
+          <div class="field-group"><label>Something specific about them</label><textarea id="o-about" rows="2" placeholder="e.g. They posted about burnout in tech, run a newsletter…"></textarea></div>
+          <div class="field-group"><label>Your goal</label><textarea id="o-goal" rows="2" placeholder="e.g. I want to learn about their freelance journey…"></textarea></div>
         </div>
-        <div class="field-group"><label>Their role or what they do</label><input id="o-role" type="text" placeholder="e.g. UX designer at a startup" /></div>
-        <div class="field-group"><label>Something specific about them</label><textarea id="o-about" rows="2" placeholder="e.g. They posted about burnout in tech, run a newsletter…"></textarea></div>
-        <div class="field-group"><label>Your goal</label><textarea id="o-goal" rows="2" placeholder="e.g. I want to learn about their freelance journey…"></textarea></div>
-      </div>
-
-      <div id="panel-inperson" style="display:none;">
-        <div class="field-group"><label>Type of event *</label><input id="ip-event" type="text" placeholder="e.g. Tech meetup, industry conference, alumni mixer" /></div>
-        <div class="field-group"><label>Your role / background</label><input id="ip-role" type="text" placeholder="e.g. Networking coach, marketer, student" /></div>
-        <div class="field-group"><label>Who are you hoping to meet?</label><input id="ip-target" type="text" placeholder="e.g. Founders, hiring managers, collaborators" /></div>
-        <div class="field-group"><label>I need help with</label>
-          <div class="chip-group">
-            <button class="chip sub selected" onclick="this.classList.toggle('selected')">Conversation starters</button>
-            <button class="chip sub" onclick="this.classList.toggle('selected')">Elevator pitch</button>
-            <button class="chip sub" onclick="this.classList.toggle('selected')">How to exit gracefully</button>
-            <button class="chip sub" onclick="this.classList.toggle('selected')">What to do if I blank</button>
+        <div id="panel-inperson" style="display:none;">
+          <div class="field-group"><label>Type of event *</label><input id="ip-event" type="text" placeholder="e.g. Tech meetup, industry conference, alumni mixer" /></div>
+          <div class="field-group"><label>Your role / background</label><input id="ip-role" type="text" placeholder="e.g. Networking coach, marketer, student" /></div>
+          <div class="field-group"><label>Who are you hoping to meet?</label><input id="ip-target" type="text" placeholder="e.g. Founders, hiring managers, collaborators" /></div>
+          <div class="field-group"><label>I need help with</label>
+            <div class="chip-group">
+              <button class="chip sub selected" onclick="this.classList.toggle('selected')">Conversation starters</button>
+              <button class="chip sub" onclick="this.classList.toggle('selected')">Elevator pitch</button>
+              <button class="chip sub" onclick="this.classList.toggle('selected')">How to exit gracefully</button>
+              <button class="chip sub" onclick="this.classList.toggle('selected')">What to do if I blank</button>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div id="panel-followup" style="display:none;">
-        <div class="field-row">
-          <div><label>Their name *</label><input id="fu-name" type="text" placeholder="e.g. Marcus Williams" /></div>
-          <div><label>Where you met</label><input id="fu-where" type="text" placeholder="e.g. Conference, LinkedIn" /></div>
+        <div id="panel-followup" style="display:none;">
+          <div class="field-row">
+            <div><label>Their name *</label><input id="fu-name" type="text" placeholder="e.g. Marcus Williams" /></div>
+            <div><label>Where you met</label><input id="fu-where" type="text" placeholder="e.g. Conference, LinkedIn" /></div>
+          </div>
+          <div class="field-group"><label>What you talked about</label><textarea id="fu-context" rows="2" placeholder="e.g. We talked about breaking into sales engineering…"></textarea></div>
+          <div class="field-group"><label>Desired next step</label><input id="fu-next" type="text" placeholder="e.g. Stay in touch, schedule a call" /></div>
         </div>
-        <div class="field-group"><label>What you talked about</label><textarea id="fu-context" rows="2" placeholder="e.g. We talked about breaking into sales engineering…"></textarea></div>
-        <div class="field-group"><label>Desired next step</label><input id="fu-next" type="text" placeholder="e.g. Stay in touch, schedule a call" /></div>
-      </div>
-
-      <div id="panel-reconnect" style="display:none;">
-        <div class="field-row">
-          <div><label>Their name *</label><input id="rc-name" type="text" placeholder="e.g. Priya Sharma" /></div>
-          <div><label>How long since you spoke</label><input id="rc-time" type="text" placeholder="e.g. 6 months, 2 years" /></div>
+        <div id="panel-reconnect" style="display:none;">
+          <div class="field-row">
+            <div><label>Their name *</label><input id="rc-name" type="text" placeholder="e.g. Priya Sharma" /></div>
+            <div><label>How long since you spoke</label><input id="rc-time" type="text" placeholder="e.g. 6 months, 2 years" /></div>
+          </div>
+          <div class="field-group"><label>How you originally knew them</label><input id="rc-how" type="text" placeholder="e.g. Old coworker, college classmate" /></div>
+          <div class="field-group"><label>Reason to reconnect</label><textarea id="rc-reason" rows="2" placeholder="e.g. I saw they got promoted, I'm exploring a career change…"></textarea></div>
         </div>
-        <div class="field-group"><label>How you originally knew them</label><input id="rc-how" type="text" placeholder="e.g. Old coworker, college classmate" /></div>
-        <div class="field-group"><label>Reason to reconnect</label><textarea id="rc-reason" rows="2" placeholder="e.g. I saw they got promoted, I'm exploring a career change…"></textarea></div>
-      </div>
-
-      <div id="panel-intro" style="display:none;">
-        <div class="field-group"><label>Name *</label><input id="in-name" type="text" placeholder="e.g. Alex Rivera" /></div>
-        <div class="field-group"><label>What you do</label><input id="in-role" type="text" placeholder="e.g. Networking coach & founder of NIMP" /></div>
-        <div class="field-group"><label>Who you help or what you're building</label><textarea id="in-work" rows="2" placeholder="e.g. I help introverts build real connections without the awkwardness…"></textarea></div>
-        <div class="field-group"><label>Where will you use this intro?</label>
-          <select id="in-context"><option>Networking event (in person)</option><option>LinkedIn bio</option><option>Cold email or DM</option><option>Job interview</option><option>Online community intro</option></select>
+        <div id="panel-intro" style="display:none;">
+          <div class="field-group"><label>Name *</label><input id="in-name" type="text" placeholder="e.g. Alex Rivera" /></div>
+          <div class="field-group"><label>What you do</label><input id="in-role" type="text" placeholder="e.g. Networking coach & founder of NIMP" /></div>
+          <div class="field-group"><label>Who you help or what you're building</label><textarea id="in-work" rows="2" placeholder="e.g. I help introverts build real connections without the awkwardness…"></textarea></div>
+          <div class="field-group"><label>Where will you use this intro?</label>
+            <select id="in-context"><option>Networking event (in person)</option><option>LinkedIn bio</option><option>Cold email or DM</option><option>Job interview</option><option>Online community intro</option></select>
+          </div>
         </div>
-      </div>
-
-      <div style="margin-top: 20px; margin-bottom: 20px;">
-        <label>Tone</label>
-        <div class="chip-group">
-          <button class="chip tone selected" onclick="selectTone(this)">Warm &amp; calm</button>
-          <button class="chip tone" onclick="selectTone(this)">Confident &amp; clear</button>
-          <button class="chip tone" onclick="selectTone(this)">Curious &amp; genuine</button>
-          <button class="chip tone" onclick="selectTone(this)">Low-key &amp; easy</button>
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+          <label>Tone</label>
+          <div class="chip-group">
+            <button class="chip tone selected" onclick="selectTone(this)">Warm &amp; calm</button>
+            <button class="chip tone" onclick="selectTone(this)">Confident &amp; clear</button>
+            <button class="chip tone" onclick="selectTone(this)">Curious &amp; genuine</button>
+            <button class="chip tone" onclick="selectTone(this)">Low-key &amp; easy</button>
+          </div>
         </div>
+        <button class="gen-btn" id="gen-btn" onclick="generate()">Get my words ↗</button>
+        <div class="error-box" id="err-box"></div>
       </div>
 
-      <button class="gen-btn" id="gen-btn" onclick="generate()">Get my words ↗</button>
-      <div class="error-box" id="err-box"></div>
+      <div class="output-card" id="output-card">
+        <div class="output-header">
+          <span class="output-label">Your message</span>
+          <div class="output-actions">
+            <button class="action-btn" id="regen-btn" onclick="regenerate()">↺ Regenerate</button>
+            <button class="action-btn" id="save-btn" onclick="saveMsg()">★ Save</button>
+            <button class="action-btn" id="copy-btn" onclick="copyMsg()">Copy</button>
+          </div>
+        </div>
+        <div class="output-text" id="output-text"></div>
+        <div class="char-count" id="char-count"></div>
+      </div>
+
+      <div class="body-tips-card" id="body-tips-card" style="display:none;">
+        <div class="body-tips-label">Body language tips</div>
+        <div id="body-tips-content"></div>
+      </div>
+
+      <div class="history-card" id="history-card">
+        <div class="history-header">
+          <span style="font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">Saved messages</span>
+          <button class="action-btn" onclick="clearHistory()">Clear all</button>
+        </div>
+        <div id="history-list"></div>
+      </div>
     </div>
 
-    <div class="output-card" id="output-card">
-      <div class="output-header">
-        <span class="output-label">Your message</span>
-        <div class="output-actions">
-          <button class="action-btn" id="regen-btn" onclick="regenerate()">↺ Regenerate</button>
-          <button class="action-btn" id="save-btn" onclick="saveMsg()">★ Save</button>
-          <button class="action-btn" id="copy-btn" onclick="copyMsg()">Copy</button>
+    <!-- NIM AGENT -->
+    <div id="nim-section" style="display:none;">
+      <!-- Pro: show agent -->
+      <div class="nim-card" id="nim-chat-card">
+        <div class="nim-header">
+          <div class="nim-avatar">🤫</div>
+          <div>
+            <div class="nim-name">Nim</div>
+            <div class="nim-sub">Your personal networking coach</div>
+          </div>
+          <div class="nim-online"></div>
+        </div>
+        <div class="nim-messages" id="nim-messages"></div>
+        <div class="nim-quick-prompts" id="nim-quick-prompts">
+          <button class="nim-quick" onclick="nimQuick('I need to reach out to someone I met at a networking event last week')">I met someone at an event 🤝</button>
+          <button class="nim-quick" onclick="nimQuick('I want to send a LinkedIn message to someone I admire but don\'t know')">Cold LinkedIn outreach 💬</button>
+          <button class="nim-quick" onclick="nimQuick('I have a networking event coming up and I\'m nervous')">Event prep 🎯</button>
+          <button class="nim-quick" onclick="nimQuick('I want to reconnect with an old colleague I haven\'t spoken to in a while')">Reconnect with someone 🔄</button>
+        </div>
+        <div class="nim-input-area">
+          <textarea class="nim-input" id="nim-input" rows="1" placeholder="Tell Nim what you need help with…" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();nimSend();}"></textarea>
+          <button class="nim-send" id="nim-send-btn" onclick="nimSend()">↑</button>
         </div>
       </div>
-      <div class="output-text" id="output-text"></div>
-      <div class="char-count" id="char-count"></div>
-    </div>
 
-    <!-- Body Language Tips -->
-    <div class="body-tips-card" id="body-tips-card" style="display:none;">
-      <div class="body-tips-label">Body language tips</div>
-      <div id="body-tips-content"></div>
-    </div>
-
-    <div class="history-card" id="history-card">
-      <div class="history-header">
-        <span style="font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">Saved messages</span>
-        <button class="action-btn" onclick="clearHistory()">Clear all</button>
+      <!-- Free: show upgrade prompt -->
+      <div class="nim-upgrade-card" id="nim-upgrade-card" style="display:none;">
+        <div class="nim-upgrade-emoji">🤫</div>
+        <div class="nim-upgrade-title">Meet Nim, your networking coach</div>
+        <div class="nim-upgrade-sub">Nim is your personal AI networking coach. Just talk to her naturally — she'll ask the right questions and help you craft the perfect message, give real-time advice, and coach you through any networking situation.</div>
+        <div class="nim-upgrade-perks">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin-bottom:8px; font-weight:500;">Pro includes</div>
+          <div class="nim-upgrade-perk"><span style="color:var(--teal);font-weight:600;">✓</span> Full access to Nim — your AI networking coach</div>
+          <div class="nim-upgrade-perk"><span style="color:var(--teal);font-weight:600;">✓</span> Unlimited messages across all modes</div>
+          <div class="nim-upgrade-perk"><span style="color:var(--teal);font-weight:600;">✓</span> Body language & posture tips</div>
+          <div class="nim-upgrade-perk"><span style="color:var(--teal);font-weight:600;">✓</span> Save & download your answers</div>
+        </div>
+        <button onclick="handleUpgrade()" style="width:100%; padding:14px; background:var(--teal); color:#fff; border:none; border-radius:12px; font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500; cursor:pointer;">Upgrade to Pro — $9/mo</button>
+        <p style="font-size:12px; color:var(--muted); margin-top:12px;">No contracts. Cancel anytime.</p>
       </div>
-      <div id="history-list"></div>
     </div>
 
     <div id="delete-account-section" style="display:none; text-align:center; padding: 24px 0 8px;">
       <button onclick="handleDeleteAccount()" style="background:transparent;border:none;font-size:11px;color:#c8c2ba;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline;">Delete my account</button>
     </div>
-
   </div>
 </div>
 
 <!-- ===== SUCCESS PAGE ===== -->
 <div id="success-page">
-  <nav>
-    <div class="nav-logo">NIMP<span>.</span></div>
-  </nav>
+  <nav><div class="nav-logo">NIMP<span>.</span></div></nav>
   <div class="success-body">
     <div class="success-icon">✓</div>
     <h1 class="success-title">Welcome to Pro!</h1>
@@ -489,7 +499,7 @@
       <div class="success-perk"><span class="success-check">✓</span> Unlimited messages every day</div>
       <div class="success-perk"><span class="success-check">✓</span> Body language & posture tips</div>
       <div class="success-perk"><span class="success-check">✓</span> Save & download your answers</div>
-      <div class="success-perk"><span class="success-check">✓</span> AI Networking Agent (coming soon)</div>
+      <div class="success-perk"><span class="success-check">✓</span> Nim — your AI Networking Agent 🤫</div>
     </div>
     <button class="success-btn" onclick="goToApp()">Start networking →</button>
   </div>
@@ -537,7 +547,7 @@
       <div class="limit-perk"><span class="limit-perk-check">✓</span> Unlimited messages every day</div>
       <div class="limit-perk"><span class="limit-perk-check">✓</span> Save & download your answers</div>
       <div class="limit-perk"><span class="limit-perk-check">✓</span> Body language & posture tips</div>
-      <div class="limit-perk"><span class="limit-perk-check">✓</span> AI Networking Agent</div>
+      <div class="limit-perk"><span class="limit-perk-check">✓</span> Nim — AI Networking Agent</div>
     </div>
     <button class="limit-btn-share" onclick="shareNIMP()">Share NIMP & get 1 more message</button>
     <button class="limit-btn-upgrade" onclick="handleUpgrade()">Upgrade to Pro — $9/mo</button>
@@ -553,7 +563,6 @@ const TIPS = [
   "Reconnecting is never as awkward as it feels. A genuine reason to reach out is all you need.",
   "Your intro should answer three things: who you are, what you do, and why it matters to them."
 ];
-
 const BODY_TIPS = {
   0: ["Make eye contact when you hit send — confidence carries through in digital tone too.", "Keep your posture open when writing; relaxed energy comes through in word choice.", "Take a breath before reaching out. Calm energy makes for more natural messages."],
   1: ["Make eye contact and smile when you deliver this — it signals warmth and confidence.", "Keep shoulders back and arms uncrossed to project openness.", "Mirror their energy subtly — if they're animated, match that enthusiasm slightly."],
@@ -561,7 +570,6 @@ const BODY_TIPS = {
   3: ["Approach reconnecting with an open, curious posture — no pressure in your body or your words.", "Smile while you write. It genuinely changes your tone.", "Keep it brief — short messages feel less intense for both of you."],
   4: ["Practice your intro standing up with good posture before an event.", "Speak slowly and make eye contact — the pause after your name is power.", "Keep your hands visible and relaxed when delivering your intro in person."]
 };
-
 const PANELS = ['panel-online','panel-inperson','panel-followup','panel-reconnect','panel-intro'];
 const MODE_NAMES = ['Online DM','In-person','Follow-up','Reconnect','Intro'];
 const DAILY_LIMIT = 5;
@@ -572,25 +580,21 @@ let savedMessages = [];
 let lastPrompt = '';
 let currentUser = null;
 let isPro = false;
+let nimHistory = [];
+let nimInitialized = false;
 
-// ─── Check for success redirect ──────────────────────────────────
+// ─── Boot ────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
   const params = new URLSearchParams(window.location.search);
   if (params.get('session_id') && params.get('user_id')) {
-    const userId = params.get('user_id');
     currentUser = JSON.parse(localStorage.getItem('nimp_user') || 'null');
     showSuccessPage();
-    // Clean URL
     window.history.replaceState({}, '', '/');
   } else if (params.get('cancelled')) {
     window.history.replaceState({}, '', '/');
   }
-  // Restore user from localStorage
   const stored = localStorage.getItem('nimp_user');
-  if (stored) {
-    currentUser = JSON.parse(stored);
-    checkProStatus();
-  }
+  if (stored) { currentUser = JSON.parse(stored); checkProStatus(); }
   updateTip();
 });
 
@@ -606,71 +610,47 @@ function goToApp() {
   showApp();
 }
 
-// ─── Pro Status ───────────────────────────────────────────────────
 async function checkProStatus() {
   if (!currentUser) { isPro = false; return; }
   try {
-    const res = await fetch('/api/pro/check', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: currentUser.id })
-    });
+    const res = await fetch('/api/pro/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId: currentUser.id }) });
     const data = await res.json();
     isPro = data.isPro || false;
   } catch(e) { isPro = false; }
 }
 
-// ─── Stripe Upgrade ──────────────────────────────────────────────
 async function handleUpgrade() {
-  if (!currentUser) {
-    closeLimitModal();
-    openAuthModal();
-    return;
-  }
+  if (!currentUser) { closeLimitModal(); openAuthModal(); return; }
   try {
-    const res = await fetch('/api/stripe/checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: currentUser.id, email: currentUser.email })
-    });
+    const res = await fetch('/api/stripe/checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId: currentUser.id, email: currentUser.email }) });
     const data = await res.json();
     if (data.url) window.location.href = data.url;
-  } catch(e) {
-    alert('Something went wrong. Please try again.');
-  }
+  } catch(e) { alert('Something went wrong. Please try again.'); }
 }
 
 async function handleLandingUpgrade() {
-  if (!currentUser) {
-    openAuthModal();
-    return;
-  }
+  if (!currentUser) { openAuthModal(); return; }
   await handleUpgrade();
 }
 
-// ─── Guest helpers ────────────────────────────────────────────────
 function getGuestCount() {
   const data = JSON.parse(localStorage.getItem('nimp_guest') || '{}');
   const today = new Date().toISOString().split('T')[0];
   if (data.date !== today) return 0;
   return data.count || 0;
 }
-
 function setGuestCount(n) {
   const today = new Date().toISOString().split('T')[0];
   localStorage.setItem('nimp_guest', JSON.stringify({ date: today, count: n }));
 }
-
 function getBonusCount() { return parseInt(localStorage.getItem('nimp_bonus') || '0'); }
 function setBonusCount(n) { localStorage.setItem('nimp_bonus', String(n)); }
 
-// ─── Usage UI ────────────────────────────────────────────────────
 async function refreshUsageBar() {
   const label = document.getElementById('usage-label');
   const dotsEl = document.getElementById('usage-dots');
   const signinLink = document.getElementById('usage-signin-link');
   const unlimitedBadge = document.getElementById('pro-unlimited-badge');
-
   if (isPro) {
     label.textContent = 'Messages today';
     dotsEl.innerHTML = '';
@@ -678,18 +658,12 @@ async function refreshUsageBar() {
     unlimitedBadge.style.display = 'inline';
     return;
   }
-
   unlimitedBadge.style.display = 'none';
   let count = 0;
   let limit = DAILY_LIMIT + getBonusCount();
-
   if (currentUser) {
     try {
-      const res = await fetch('/api/usage/check', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: currentUser.id })
-      });
+      const res = await fetch('/api/usage/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId: currentUser.id }) });
       const data = await res.json();
       count = data.count || 0;
       limit = data.limit + getBonusCount();
@@ -699,7 +673,6 @@ async function refreshUsageBar() {
     count = getGuestCount();
     signinLink.style.display = count >= 3 ? 'inline' : 'none';
   }
-
   label.textContent = `${count} of ${limit} messages used today`;
   dotsEl.innerHTML = '';
   for (let i = 0; i < limit; i++) {
@@ -709,25 +682,10 @@ async function refreshUsageBar() {
   }
 }
 
-// ─── Auth Modal ──────────────────────────────────────────────────
-function openAuthModal() {
-  document.getElementById('auth-overlay').classList.add('open');
-  showSignup();
-}
-
-function closeAuthModal() {
-  document.getElementById('auth-overlay').classList.remove('open');
-}
-
-function showSignup() {
-  document.getElementById('auth-signup').style.display = 'block';
-  document.getElementById('auth-signin').style.display = 'none';
-}
-
-function showSignin() {
-  document.getElementById('auth-signup').style.display = 'none';
-  document.getElementById('auth-signin').style.display = 'block';
-}
+function openAuthModal() { document.getElementById('auth-overlay').classList.add('open'); showSignup(); }
+function closeAuthModal() { document.getElementById('auth-overlay').classList.remove('open'); }
+function showSignup() { document.getElementById('auth-signup').style.display = 'block'; document.getElementById('auth-signin').style.display = 'none'; }
+function showSignin() { document.getElementById('auth-signup').style.display = 'none'; document.getElementById('auth-signin').style.display = 'block'; }
 
 async function handleSignup() {
   const email = document.getElementById('signup-email').value.trim();
@@ -764,17 +722,8 @@ async function handleSignin() {
   } catch(e) { errEl.textContent = 'Something went wrong. Please try again.'; errEl.style.display = 'block'; }
 }
 
-function onAuthSuccess() {
-  closeAuthModal();
-  updateUserChip();
-  refreshUsageBar();
-}
-
-function continueAsGuest() {
-  closeAuthModal();
-  updateUserChip();
-  refreshUsageBar();
-}
+function onAuthSuccess() { closeAuthModal(); updateUserChip(); refreshUsageBar(); }
+function continueAsGuest() { closeAuthModal(); updateUserChip(); refreshUsageBar(); }
 
 function updateUserChip() {
   const chip = document.getElementById('user-chip');
@@ -801,12 +750,10 @@ function updateUserChip() {
 }
 
 function signOut() {
-  currentUser = null;
-  isPro = false;
+  currentUser = null; isPro = false;
   localStorage.removeItem('nimp_user');
   document.getElementById('delete-account-section').style.display = 'none';
-  updateUserChip();
-  refreshUsageBar();
+  updateUserChip(); refreshUsageBar();
 }
 
 async function handleDeleteAccount() {
@@ -814,36 +761,25 @@ async function handleDeleteAccount() {
   const confirmed = confirm('Are you sure you want to delete your account? This cannot be undone.');
   if (!confirmed) return;
   try {
-    await fetch('/api/auth/delete', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: currentUser.id })
-    });
+    await fetch('/api/auth/delete', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId: currentUser.id }) });
     alert('Your account data has been deleted. You have been signed out.');
     signOut();
-  } catch(e) {
-    alert('Something went wrong. Please email latifah@getnimp.co to request deletion.');
-  }
+  } catch(e) { alert('Something went wrong. Please email latifah@getnimp.co to request deletion.'); }
 }
 
-// ─── Limit Modal ──────────────────────────────────────────────────
 function openLimitModal() { document.getElementById('limit-overlay').classList.add('open'); }
 function closeLimitModal() { document.getElementById('limit-overlay').classList.remove('open'); }
 
 function shareNIMP() {
   const url = 'https://www.getnimp.co';
   const text = 'I\'ve been using NIMP to help me network without the awkwardness — it\'s free, check it out:';
-  if (navigator.share) {
-    navigator.share({ title: 'NIMP — Network In My Pocket', text, url });
-  } else {
-    navigator.clipboard.writeText(text + ' ' + url).then(() => alert('Link copied! Share it and your bonus message will be added.'));
-  }
+  if (navigator.share) { navigator.share({ title: 'NIMP — Network In My Pocket', text, url }); }
+  else { navigator.clipboard.writeText(text + ' ' + url).then(() => alert('Link copied! Share it and your bonus message will be added.')); }
   setBonusCount(getBonusCount() + 1);
   closeLimitModal();
   refreshUsageBar();
 }
 
-// ─── Usage Check ─────────────────────────────────────────────────
 async function checkCanGenerate() {
   if (isPro) return true;
   const bonus = getBonusCount();
@@ -852,17 +788,13 @@ async function checkCanGenerate() {
     const res = await fetch('/api/usage/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId: currentUser.id }) });
     const data = await res.json();
     return (data.count || 0) < effectiveLimit;
-  } else {
-    return getGuestCount() < effectiveLimit;
-  }
+  } else { return getGuestCount() < effectiveLimit; }
 }
 
-// ─── Body Language Tips ──────────────────────────────────────────
 function showBodyTips(mode) {
   const card = document.getElementById('body-tips-card');
   const content = document.getElementById('body-tips-content');
   const tips = BODY_TIPS[mode] || BODY_TIPS[0];
-
   if (isPro) {
     content.innerHTML = tips.map(t => `<div class="body-tip"><span class="tip-icon">→</span>${t}</div>`).join('');
   } else {
@@ -877,24 +809,15 @@ function showBodyTips(mode) {
   card.style.display = 'block';
 }
 
-// ─── App Navigation ──────────────────────────────────────────────
 function showApp(mode) {
   document.getElementById('landing').style.display = 'none';
   document.getElementById('app').style.display = 'block';
   document.getElementById('success-page').style.display = 'none';
   window.scrollTo(0,0);
-  if (mode !== undefined) {
-    const pills = document.querySelectorAll('.pill');
-    switchMode(mode, pills[mode]);
-  }
-  updateTip();
-  updateUserChip();
-  refreshUsageBar();
+  if (mode !== undefined) { const pills = document.querySelectorAll('.pill'); switchMode(mode, pills[mode]); }
+  updateTip(); updateUserChip(); refreshUsageBar();
   const hasVisited = localStorage.getItem('nimp_visited');
-  if (!hasVisited && !currentUser) {
-    localStorage.setItem('nimp_visited', '1');
-    setTimeout(() => openAuthModal(), 600);
-  }
+  if (!hasVisited && !currentUser) { localStorage.setItem('nimp_visited', '1'); setTimeout(() => openAuthModal(), 600); }
 }
 
 function showLanding() {
@@ -907,6 +830,9 @@ function showLanding() {
 function updateTip() { document.getElementById('mode-tip').textContent = '💡 ' + TIPS[currentMode]; }
 
 function switchMode(i, el) {
+  document.getElementById('standard-modes').style.display = 'block';
+  document.getElementById('nim-section').style.display = 'none';
+  document.getElementById('nim-pill').classList.remove('active');
   PANELS.forEach((p,j) => document.getElementById(p).style.display = j===i ? 'block' : 'none');
   document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
@@ -915,6 +841,22 @@ function switchMode(i, el) {
   document.getElementById('err-box').style.display = 'none';
   document.getElementById('output-card').style.display = 'none';
   document.getElementById('body-tips-card').style.display = 'none';
+}
+
+function switchToNim() {
+  document.getElementById('standard-modes').style.display = 'none';
+  document.getElementById('nim-section').style.display = 'block';
+  document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+  document.getElementById('nim-pill').classList.add('active');
+
+  if (isPro) {
+    document.getElementById('nim-chat-card').style.display = 'block';
+    document.getElementById('nim-upgrade-card').style.display = 'none';
+    if (!nimInitialized) initNim();
+  } else {
+    document.getElementById('nim-chat-card').style.display = 'none';
+    document.getElementById('nim-upgrade-card').style.display = 'block';
+  }
 }
 
 function selectTone(el) {
@@ -983,10 +925,7 @@ async function generate() {
   await sendToAI(prompt);
 }
 
-function regenerate() {
-  if (!lastPrompt) return;
-  sendToAI(lastPrompt + '\n\n(Write a different variation.)');
-}
+function regenerate() { if (!lastPrompt) return; sendToAI(lastPrompt + '\n\n(Write a different variation.)'); }
 
 async function sendToAI(prompt) {
   const errBox = document.getElementById('err-box');
@@ -1072,6 +1011,96 @@ function copyHist(i) {
 }
 
 function clearHistory() { savedMessages = []; renderHistory(); }
+
+// ─── NIM AGENT ───────────────────────────────────────────────────
+function initNim() {
+  nimInitialized = true;
+  nimHistory = [];
+  const container = document.getElementById('nim-messages');
+  container.innerHTML = '';
+  nimAddAgentMsg("Hey! I'm Nim 🤫 I'm your personal networking coach — think of me as a knowledgeable friend who happens to be a networking expert.\n\nWhat's going on? Tell me what you're trying to do and I'll help you nail it.");
+}
+
+function nimAddAgentMsg(text) {
+  const container = document.getElementById('nim-messages');
+  const div = document.createElement('div');
+  div.className = 'nim-msg-agent';
+  div.innerHTML = `<div class="nim-msg-agent-avatar">🤫</div><div class="nim-bubble-agent">${text.replace(/\n/g,'<br>')}</div>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function nimAddUserMsg(text) {
+  const container = document.getElementById('nim-messages');
+  const div = document.createElement('div');
+  div.style.display = 'flex';
+  div.style.justifyContent = 'flex-end';
+  div.innerHTML = `<div class="nim-bubble-user">${text.replace(/\n/g,'<br>')}</div>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function nimShowTyping() {
+  const container = document.getElementById('nim-messages');
+  const div = document.createElement('div');
+  div.className = 'nim-msg-agent';
+  div.id = 'nim-typing';
+  div.innerHTML = `<div class="nim-msg-agent-avatar">🤫</div><div class="nim-typing"><div class="nim-dot"></div><div class="nim-dot"></div><div class="nim-dot"></div></div>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function nimRemoveTyping() {
+  const el = document.getElementById('nim-typing');
+  if (el) el.remove();
+}
+
+function nimQuick(text) {
+  document.getElementById('nim-input').value = text;
+  // Hide quick prompts after first use
+  document.getElementById('nim-quick-prompts').style.display = 'none';
+  nimSend();
+}
+
+async function nimSend() {
+  const input = document.getElementById('nim-input');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+
+  nimAddUserMsg(text);
+  nimHistory.push({ role: 'user', content: text });
+  nimShowTyping();
+  document.getElementById('nim-send-btn').disabled = true;
+
+  try {
+    const body = { messages: nimHistory };
+    if (currentUser) body.userId = currentUser.id;
+    const res = await fetch('/api/agent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+
+    if (res.status === 403) {
+      nimRemoveTyping();
+      nimAddAgentMsg("It looks like you need a Pro subscription to chat with me. Upgrade to Pro and I'll be right here waiting! 🤫");
+      return;
+    }
+
+    const msg = data?.content?.[0]?.text?.trim();
+    if (!msg) throw new Error();
+    nimHistory.push({ role: 'assistant', content: msg });
+    nimRemoveTyping();
+    nimAddAgentMsg(msg);
+  } catch(e) {
+    nimRemoveTyping();
+    nimAddAgentMsg("Something went wrong. Please try again!");
+  } finally {
+    document.getElementById('nim-send-btn').disabled = false;
+  }
+}
 
 document.getElementById('auth-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeAuthModal();
